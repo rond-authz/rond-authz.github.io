@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Docsy Jekyll Theme
+title: Rönd
 permalink: /
 ---
 
-# Welcome to Docsy Jekyll
+# Welcome to Rönd
 
 This is a starter template for a docsy jekyll theme.
 
