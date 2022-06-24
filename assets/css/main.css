@@ -110,10 +110,10 @@ excluded_in_search: true
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #fff;
-    --gray: #888;
-    --gray-dark: #333;
+    --gray: #F5F5F5;
+    --gray-dark: #606060;
     --primary: {{ site.color }};
-    --secondary: #D95040;
+    --secondary: #139EFA;
     --success: #3772FF;
     --info: #C0E0DE;
     --warning: #ED6A5A;
