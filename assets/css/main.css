@@ -18578,6 +18578,10 @@ footer {
     min-height: 150px
 }
 
+#cookies-policy-advanced {
+    cursor: pointer;
+}
+
 @media(max-width:991.98px) {
     footer {
         min-height: 200px

@@ -29,10 +29,39 @@
         </ul>
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">© {{ 'now' | date: "%Y" }} {{ site.author }} All Rights Reserved</small>
-        {% if site.privacy %}<small class="ml-1"><a href="{{ site.privacy }}" target="_blank">Privacy Policy</a></small>{% endif %}
+        <div>
+          <small class="text-white">© {{ 'now' | date: "%Y" }} {{ site.author }} All Rights Reserved</small>
+        </div>
+        {% if site.google-analytics %}
+        <div id="cookies-policy-advanced">
+          <small class="ml-1 text-white">
+            Cookies Settings
+          </small>
+        </div>
+        {% endif %}
+        {% if site.privacy %}
+        <div>  
+          <small class="ml-1"><a href="{{ site.privacy }}" target="_blank">Privacy Policy</a></small>
+        </div>
+        {% endif %}
         <p class="mt-2""> <span style="color:#fff !important;><a href="/about/">About Rönd</a></span> </p>	
       </div>
     </div>
   </div>
 </footer>
+
+{% if site.google-analytics %}
+<!-- Google Tag Manager -->
+<script>
+  (function () {
+    document.getElementById("cookies-policy-advanced").onclick = function () {
+      var adv_settings = document.querySelectorAll(
+        ".cookies-update-preferences"
+      );
+      adv_settings.forEach(function (adv_setting) {
+        adv_setting.click();
+      });
+    };
+  })();
+</script>
+{% endif %}
