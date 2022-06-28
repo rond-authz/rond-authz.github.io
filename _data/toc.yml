@@ -2,12 +2,12 @@
   url: docs
   links:
      - title: "Overview"
-      url: "docs/getting-started"
-        children:
+       url: "docs/getting-started"
+          children:
         - title: Configuration
-        url: "docs/getting-started#getting-started"
+          url: "docs/getting-started#getting-started"
         - title: Policy Integration
-        url: "docs/getting-started#development"
+          url: "docs/getting-started#development"
     - title: "Cheat Sheet"
       url: "news"
 
