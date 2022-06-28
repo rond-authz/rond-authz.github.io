@@ -1,14 +1,18 @@
 - title: Documentation
   url: docs
   links:
-     - title: "Overview"
-       url: "docs/getting-started"
-          children:
-        - title: Configuration
+    - title: "Getting Started"
+      url: "docs/getting-started"
+      children:
+        - title: Features
           url: "docs/getting-started#getting-started"
-        - title: Policy Integration
+        - title: Development
           url: "docs/getting-started#development"
-    - title: "Cheat Sheet"
+        - title: Customization
+          url: "docs/getting-started#customization"
+    - title: "About"
+      url: "about"
+    - title: "News"
       url: "news"
 
 #- title: "Extras"
