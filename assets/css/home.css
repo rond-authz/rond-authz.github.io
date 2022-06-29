@@ -1,0 +1,193 @@
+---
+layout: null
+excluded_in_search: true
+---
+
+html {
+    background: #2b2b40;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #00a4ca;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.3em;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 2.2em;
+    margin: 0 0 30px 0;
+}
+
+h3 {
+    margin: 20px 0 10px 0;
+}
+
+p {
+    font-size: 1.38em;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+@media (min-width:768px) {
+    .flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .flex .image,
+    .flex .text {
+        -webkit-flex: 1;
+        flex: 1;
+        padding: 0 20px;
+    }
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to bottom, #4182e4 0, #4182e4 100%) no-repeat #a05fb7;
+    padding-top: 100px;
+}
+
+.hero p {
+    color: #fff;
+}
+
+.container,
+.text-container {
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.text-container {
+    max-width: 750px;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+section+section {
+    padding-top: 0;
+}
+
+.subtext {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cta {
+    margin: 60px 0;
+}
+
+.button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background: #4182e4;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    transition: .2s ease-in-out;
+}
+
+.button a:hover {
+    border: 1px solid #fff;
+    background: #4182e4;
+    cursor: pointer;
+}
+
+.button.alt a {
+    background: #ede7fc;
+    border-radius: 15px;
+    border: 1px solid #523be4;
+    padding: 16px 50px;
+    color: #523be4;
+}
+
+.button.alt a:hover {
+    background: #523be4;
+    color: #fff;
+}
+
+.screenshot {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ddd url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E) 4px 4px no-repeat;
+    padding: 20px 0 0 0;
+    position: relative;
+}
+
+.content {
+    background: #fff;
+    padding: 1px 0 0 0;
+    position: relative;
+}
+
+.content section:nth-child(even) .flex {
+    flex-direction: row-reverse;
+}
+
+.bottom-cta {
+    background: linear-gradient(to bottom, #4182e4 0, #4182e4 100%);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 100px 0;
+}
+
+.bottom-cta h2 {
+    margin-bottom: 50px;
+}
+
+.carousel-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carousel-element {
+    padding: 10px;
+}

@@ -1,0 +1,64 @@
+<section class="hero col-12">
+  <div class="text-container">
+    <h1 class="editable">{{site.data.home.title}}</h1>
+    <p class="subtext editable">{{site.data.home.subtitle}}</p>
+    <div class="cta button alt">
+      <a href="{{site.data.home.button_link}}"
+        >{{site.data.home.button_label}}</a
+      >
+    </div>
+    <div>
+      <img
+        src="{{site.data.home.image_file}}"
+        alt="{{site.data.home.image_alt}}"
+        class="screenshot editable"
+      />
+    </div>
+  </div>
+</section>
+
+<div class="content col-12">
+  {% for card in site.data.home.cards %}
+  <section>
+    <div class="container flex">
+      <div class="text editable">
+        <h2>{{card.title}}</h2>
+        <p>{{card.subtitle}}</p>
+        <p>
+          <a href="{{card.cta_link}}" target="_blank">{{card.cta_text}}</a>
+        </p>
+      </div>
+      <div class="image">
+        <img
+          src="{{card.image_file}}"
+          alt="{{card.image_alt}}"
+          class="screenshot editable"
+        />
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+  <section>
+    <div class="container">
+      <div class="col-12">
+        <h2>{{site.data.home.carousel.intro}}:</h2>
+      </div>
+      <div class="carousel-container">
+        {% for logo in site.data.home.carousel.card %}
+          <div class="carousel-element">
+              <img src="{{logo.image_file}}" alt="{{logo.image_alt}}" />
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bottom-cta">
+    <h2 class="editable">{{site.data.home.cta_text}}</h2>
+    <div class="button alt">
+      <a href="{{site.data.home.link_cta}}"> {{site.data.home.cta}} </a>
+    </div>
+  </section>
+</div>
