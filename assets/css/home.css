@@ -77,7 +77,7 @@ button {
 .hero {
     color: #fff;
     text-align: center;
-    background: linear-gradient(to bottom, #4182e4 0, #4182e4 100%) no-repeat #a05fb7;
+    background: #E1F1FE;
     padding-top: 100px;
 }
 
@@ -170,7 +170,7 @@ section+section {
 }
 
 .bottom-cta {
-    background: linear-gradient(to bottom, #4182e4 0, #4182e4 100%);
+    background: #E1F1FE;
     color: #fff;
     text-align: center;
     margin: 0;
