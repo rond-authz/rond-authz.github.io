@@ -1,33 +1,37 @@
-title: TThe last sales CRM <strong>you'll ever need</strong>
-subtitle: Track and optimize your sales team in real time.
+title: Security enforcement for your </br> Cloud Native Solutions.
+subtitle: Embrace the Rönd shield and feel the power of mighty Vikings.
 button_link: /sign-up/
-button_label: Get Started Free
+button_label: Download the example
 image_file: /assets/img/dashboard.png
 image_alt: Screenshot
-cta: Get Started Freee
-cta_text: <strong>00Improve</strong> your sales process today
+cta: Go to the Repo
+cta_text: Join the Wall of Shield formation and became a Rönd warrior.
 link_cta: /asd
 cards: 
-  - title: 1How can we <strong>double</strong> our sales revenue?
-    subtitle: Hydra learns your business. By analyzing your sales data, Hydra optimizes your sales process and show you where you should be spending your resources.
+  - title: <strong>Algiz rune for protection</strong>
+    subtitle: 
+Rönd is a true shield that enables you to improve data security while providing full independence and 360-degree permission governance. </br></br>
+Rönd is an authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks. </br></br>
+These building blocks allow you to create your access-security model based on the real function that people have in your organization, rather than the specific actions they need to perform.
+
     image_file: /assets/img/dashboard.png
     image_alt: Screenshot 
     cta_link: /sign-up/
     cta_text: cta_text
 
-  - title: 2How can I keep track of my sales team?
-    subtitle: Hydra learns your business. By analyzing your sales data, Hydra optimizes your sales process and show you where you should be spending your resources.
+  - title: <strong>Start your training as a warrior, with a click.</strong>
+    subtitle: Learn how to wear the helmet (OPA policy), handle the Rönd shield and try some blocking techniques.
     image_file: /assets/img/dashboard.png
     image_alt: Screenshot 
     cta_link: /sign-up/
-    cta_text: cta_text
+    cta_text: > Try it
 
-  - title: 3How can I forecast the next 90 days?
-    subtitle: Hydra learns your business. By analyzing your sales data, Hydra optimizes your sales process and show you where you should be spending your resources.
+  - title: <strong>From “Karls” to “Jarls” of the solution.</strong>
+    subtitle: Climb the viking society! Make your first step as a Karls (ordinary people), fight with Rönd as a warrior and rise as a Jarl (Master) of the solution.
     image_file: /assets/img/dashboard.png
     image_alt: Screenshot 
-    cta_link: /sign-up/
-    cta_text: cta_text
+    cta_link: https://rond-authz.github.io/docs/
+    cta_text: > Go to Docs
 carousel:
   intro: OUR MIGHTY WARRIORS
   card: 
