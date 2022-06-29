@@ -21,14 +21,14 @@ cards:
     image_file: /assets/img/dashboard.png
     image_alt: Screenshot 
     cta_link: /sign-up/
-    cta_text: > Try it
+    cta_text: &gt Try it
 
   - title: <strong>From “Karls” to “Jarls” of the solution.</strong>
     subtitle: Climb the viking society! Make your first step as a Karls (ordinary people), fight with Rönd as a warrior and rise as a Jarl (Master) of the solution.
     image_file: /assets/img/dashboard.png
     image_alt: Screenshot 
     cta_link: https://rond-authz.github.io/docs/
-    cta_text: > Go to Docs
+    cta_text: &gt Go to Docs
 carousel:
   intro: OUR MIGHTY WARRIORS
   card: 
