@@ -24,9 +24,11 @@
       <div class="text editable">
         <h2>{{card.title}}</h2>
         <p>{{card.subtitle}}</p>
+        {% if card.cta_link %}
         <p>
-          <a href="{{card.cta_link}}" target="_blank">{{card.cta_text}}</a>
+          <a href="{{card.cta_link}}" target="_blank">> {{card.cta_text}}</a>
         </p>
+        {% endif %}
       </div>
       <div class="image">
         <img
