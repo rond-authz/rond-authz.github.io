@@ -28,33 +28,8 @@ cards:
     cta_link: https://rond-authz.github.io/docs/
     cta_text: &gt Go to Docs
 carousel:
-  intro: OUR MIGHTY WARRIORS
+  intro: Our Mighty Warriors
   card: 
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
-    - image_file: https://via.placeholder.com/250x70.png
-      image_alt: "placeholder"
+    - image_file: https://www.rond-authz.github.io/assets/img/Mia-Platform-logo.png
+      image_alt: "Mia-Platform"
+   
