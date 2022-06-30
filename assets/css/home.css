@@ -44,7 +44,7 @@ h3 {
 
 p {
     font-size: 1.38em;
-    color: #666;
+    color: #1E1E1E;
     margin-bottom: 20px;
     font-weight: 300;
     line-height: 1.4em;
@@ -75,14 +75,14 @@ button {
 }
 
 .hero {
-    color: #fff;
+    color: #1E1E1E;
     text-align: center;
     background: #E1F1FE;
     padding-top: 100px;
 }
 
 .hero p {
-    color: #fff;
+    color: #1E1E1E;
 }
 
 .container,
