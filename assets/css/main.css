@@ -5346,12 +5346,12 @@ input[type=button].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-    color: #1E1E1E
+    color: #FFFFF
 }
 
 .navbar-dark .navbar-brand:hover,
 .navbar-dark .navbar-brand:focus {
-    color: #1E1E1E
+    color: #FFFFFF
 }
 
 .navbar-dark .navbar-nav .nav-link {
