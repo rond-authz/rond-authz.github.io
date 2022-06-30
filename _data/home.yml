@@ -27,9 +27,9 @@ cards:
     image_alt: Screenshot 
     cta_link: https://rond-authz.github.io/docs/
     cta_text: &gt Go to Docs
-# carousel:
-#  intro: Our Mighty Warriors
-#  card: 
-#   - image_file: assets/img/Mia-Platform-logo.png
-#      image_alt: "Mia-Platform"
+carousel:
+  intro: Our Mighty Warriors
+  card: 
+   - image_file: assets/img/Mia-Platform-logo-210x70.png
+     image_alt: "Mia-Platform"
    
