@@ -5351,11 +5351,11 @@ input[type=button].btn-block {
 
 .navbar-dark .navbar-brand:hover,
 .navbar-dark .navbar-brand:focus {
-    color: #FFFFFF
+    color: #D0C5F6
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: ##523BE4
+    color: #fff
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -10523,7 +10523,8 @@ button.bg-dark:focus {
 }
 
 .font-weight-bold {
-    font-weight: 700!important
+    font-weight: 700!important;
+    color: #fff;
 }
 
 .font-italic {
