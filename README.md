@@ -27,7 +27,25 @@ rendered on the site.
 
 ### 4. Serve
 
-Depending on how you installed jekyll:
+
+The preferred way for serving the site locally is to use `docker compose`:
+
+```bash
+docker-compose up
+```
+
+or, to run it as a daemon:
+
+```bash
+docker-compose up -d
+```
+
+You can then open your browser to [http://localhost:4000](http://localhost:4000)
+to see the server running.
+
+> Node : changes `baseurl: ""` in _config.yml  when you are running in local and prod according to the requirement.
+
+If you already have a working installation of jekyll you could instead run it directly with:
 
 ```bash
 jekyll serve
@@ -67,16 +85,3 @@ to:
 
 This additional volume is optimal for development so you can cache the bundle dependencies,
 but should be removed for production. 
-
-#### Start Container
-
-Once your docker-compose to download the base container and bring up the server:
-
-```bash
-docker-compose up -d
-```
-
-You can then open your browser to [http://localhost:4000](http://localhost:4000)
-to see the server running.
-
-> Node : changes `baseurl: ""` in _config.yml  when you are running in local and prod according to the requirement.
