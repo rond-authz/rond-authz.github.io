@@ -1,4 +1,7 @@
-- title: Discussions
-  external_url: https://github.com/rond-authz/rond/discussions
 - title: Documentation
   url: docs
+  target: _self
+- title: Discussions
+  external_url: https://github.com/rond-authz/rond/discussions
+  target: _blank
+
