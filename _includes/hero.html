@@ -1,5 +1,5 @@
 <section class="hero col-12">
-  <div class="text-container">
+  <div class="text-container" style="z-index:1">
     <h1 class="editable">{{site.data.home.title}}</h1>
     <p class="subtext editable">{{site.data.home.subtitle}}</p>
     <div class="cta button alt">
@@ -7,14 +7,8 @@
         >{{site.data.home.button_label}}</a
       >
     </div>
-    <div>
-      <img
-        src="{{site.data.home.image_file}}"
-        alt="{{site.data.home.image_alt}}"
-        class="screenshot editable"
-      />
-    </div>
   </div>
+  {% include wave.html %}
 </section>
 
 <div class="content col-12">
