@@ -4,21 +4,23 @@
     - title: "Getting Started"
       url: "docs/getting-started"
       children:
-        - title: Features
-          url: "docs/getting-started#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news"
-
-#- title: "Extras"
-#  url: "docs/extras"
-#  links:
-#   - title: Quizzes
-#      url: "docs/extras/example-quiz"
-#   - title: Tags Page
-#     url: "tags"
+        - title: Overview
+          url: "docs/getting-started#rönd-overview"
+        - title: RBAC
+          url: "docs/getting-started#rönd-and-rbac"
+        - title: Capabilities
+          url: "docs/getting-started#rönd-capabilities"
+    - title: "Configuration"
+      url: "docs/configuration"
+    - title: "How to write a policy"
+      url: "docs/policy-integration"
+      children:
+        - title: Rego Input
+          url: "docs/policy-integration#rego-input"
+        - title: RBAC data model
+          url: "docs/policy-integration#rbac-data-model"
+        - title: Custom built-ins
+          url: "docs/policy-integration#custom-built-ins"
+      
+    - title: "Cheat Sheet"
+      url: "docs/cheat-sheet"
