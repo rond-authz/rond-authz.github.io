@@ -11,19 +11,19 @@ cards:
   - title: <strong>Algiz rune for protection</strong>
     subtitle: Rönd is a true shield that enables you to improve data security while providing full independence and 360-degree permission governance. </br></br>Rönd is an authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks. </br></br>These building blocks allow you to create your access-security model based on the real function that people have in your organization, rather than the specific actions they need to perform.
 
-    image_file: /assets/img/dashboard.png
+    image_file: /assets/img/Og-Rond.jpg
     image_alt: Screenshot
 
   - title: <strong>Start your training as a warrior, with a click.</strong>
     subtitle: Learn how to wear the helmet (OPA policy), handle the Rönd shield and try some blocking techniques.
-    image_file: /assets/img/dashboard.png
+    image_file: /assets/img/Og-Rond.jpg
     image_alt: Screenshot 
     cta_link: /sign-up/
     cta_text: &gt Try it
 
   - title: <strong>From “Karls” to “Jarls” of the solution.</strong>
     subtitle: Climb the viking society! Make your first step as a Karls (ordinary people), fight with Rönd as a warrior and rise as a Jarl (Master) of the solution.
-    image_file: /assets/img/dashboard.png
+    image_file: /assets/img/Og-Rond.jpg
     image_alt: Screenshot 
     cta_link: https://rond-authz.github.io/docs/
     cta_text: &gt Go to Docs
