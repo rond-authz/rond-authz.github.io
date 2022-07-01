@@ -3,24 +3,24 @@ layout: null
 excluded_in_search: true
 ---
 
-html {
-    background: #E1F1FE;
-}
-
 body,
 html {
     margin: 0;
     padding: 0;
+    background: #E1F1FE;
 }
 
 a {
     color: #523BE4;
-    font-weight: 700;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.try-it {
+    font-weight: 700;
 }
 
 img {
