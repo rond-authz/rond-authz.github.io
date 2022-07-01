@@ -1,45 +1,37 @@
 <header>
-        <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <span class="navbar-logo"></span>{% include logo.svg %}<span class="font-weight-bold">{{ site.title }}</span>
-	</a>
-		
+  <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
+      <span class="navbar-logo"></span>{% include logo.svg %}<span class="font-weight-bold">{{ site.title }}</span>
+	  </a>
 	
-	<div class="td-navbar-nav-scroll" id="main_navbar">
-		<ul class="navbar-nav mt-2 mt-lg-0">
-			{% for link in site.data.navigation %}
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-        <a class="nav-link" target="{{ link.target }}" href="{% if link.url %}{{ site.baseurl }}/{{ link.url }}{% else %}{{ link.external_url }}{% endif %}" ><span>{{ link.title }}</span></a>
-			</li>
-			{% endfor %}
-		</ul>
-	</div>
+    <div class="td-navbar-nav-scroll" id="main_navbar">
+      <ul class="navbar-nav mt-2 mt-lg-0">
+        {% for link in site.data.navigation %}
+        <li class="nav-item mr-4 mb-2 mb-lg-0">
+          <a class="nav-link" target="{{ link.target }}" href="{% if link.url %}{{ site.baseurl }}/{{ link.url }}{% else %}{{ link.external_url }}{% endif %}" ><span>{{ link.title }}</span></a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-
-	<div class="navbar-nav d-none d-lg-block ml-md-auto">
-          <a class="gh-source" data-gh-source="github" href="{{ site.repo }}" title="Go to repository" data-md-state="done">
-          <div class="gh-source__repository">
-            <i class="fab fa fa-github fa-2x" style='padding-right:20px; float:left; margin-top:5px'></i>
-        </div></a>
-        </div>
-      </div>
-
-
-</nav>
+    <div class="navbar-nav d-none d-lg-block ml-md-auto">
+      <a class="github-button" href="https://github.com/rond-authz/rond" data-color-scheme="no-preference: dark_dimmed; light: light; dark: dark_dimmed;" data-size="large" data-show-count="true" aria-label="Star rond-authz/rond on GitHub">Star</a>
+    </div>
+  </nav>
 </header>
 
 <script>
 $(document).ready(function() {
   var url = "https://api.github.com/search/repositories?q={{ site.github_user }}/{{ site.github_repo }}";
   fetch(url, { 
-      headers: {"Accept":"application/vnd.github.preview"}
+    headers: {"Accept":"application/vnd.github.preview"}
   }).then(function(e) {
     return e.json()
   }).then(function(r) {
-     stars = r.items[0]['stargazers_count']
-     forks = r.items[0]['forks_count']
-     $('#stars').text(stars + " Stars")
-     $('#forks').text(forks + " Forks")
+    stars = r.items[0]['stargazers_count']
+    forks = r.items[0]['forks_count']
+    $('#stars').text(stars + " Stars")
+    $('#forks').text(forks + " Forks")
   });
 });
 </script>
