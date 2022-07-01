@@ -4,6 +4,7 @@ tags:
   - cheat-sheet
   - tutorial
 description: Cheat Sheet to boost up your policy writing skills
+order: 4
 ---
 
 # Cheat sheet

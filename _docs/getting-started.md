@@ -3,6 +3,7 @@ title: Getting Started
 tags:
   - starter-kit
 description: Getting started with Rönd
+order: 1
 ---
 
 # Getting Started with Rönd
