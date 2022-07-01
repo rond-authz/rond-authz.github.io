@@ -30,6 +30,6 @@ cards:
 carousel:
   intro: Our Mighty Warriors
   card: 
-   - image_file: assets/img/Mia-Platform-logo-210x70.png
+   - image_file: assets/img/mia-platform_logo.png
      image_alt: "Mia-Platform"
    
