@@ -45,11 +45,11 @@ h3 {
 }
 
 p {
-    font-size: 1.38em;
+    font-size: 1.1em;
     color: #1E1E1E;
     margin-bottom: 20px;
     font-weight: 300;
-    line-height: 1em;
+    line-height: 1.38em;
 }
 
 @media (min-width:768px) {
