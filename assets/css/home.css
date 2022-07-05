@@ -145,15 +145,15 @@ section+section {
 }
 
 .button.alt a {
-    background: #ede7fc;
-    border-radius: 15px;
-    border: 1px solid #523be4;
+    background: #fff;
+    border-radius: 45px;
+    border: 2px solid #523be4;
     padding: 16px 50px;
     color: #523be4;
 }
 
 .button.alt a:hover {
-    background: #523be4;
+    background: #EDE7FC;
     color: #fff;
 }
 
