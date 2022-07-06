@@ -8,7 +8,7 @@ cta: Go to the Repo
 cta_text: Join the Wall of Shield formation and become a Rönd warrior.
 link_cta: https://github.com/rond-authz/rond
 cards: 
-  - title: <strong>Algiz rune for protection</strong>
+  - title: <strong>A shield for your protection</strong>
     subtitle: Rönd is a true shield that enables you to improve data security while providing full independence and 360-degree permission governance. </br></br>Rönd is an authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks. </br></br>These building blocks allow you to create your access-security model based on the real function that people have in your organization, rather than the specific actions they need to perform.
 
     image_file: /assets/img/Og-Rond.jpg
