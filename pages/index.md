@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Rönd
+title: "Rönd: Security enforcement for your Cloud Native Solutions."
 permalink: /
 ---

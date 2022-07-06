@@ -18,11 +18,11 @@
   <section>
     <div class="container flex">
       <div class="text editable">
-        <h2>{{card.title}}</h2>
+        <h2 class="black-text">{{card.title}}</h2>
         <p>{{card.subtitle}}</p>
         {% if card.cta_link %}
         <p>
-          <a href="{{card.cta_link}}" target="_blank">> {{card.cta_text}}</a>
+          <a class="try-it" href="{{card.cta_link}}" target="_blank">> {{card.cta_text}}</a>
         </p>
         {% endif %}
       </div>
@@ -40,7 +40,7 @@
   <section>
     <div class="container">
       <div class="col-12">
-        <h2>{{site.data.home.carousel.intro}}:</h2>
+        <h2 class="black-text">{{site.data.home.carousel.intro}}:</h2>
       </div>
       <div class="carousel-container">
         {% for logo in site.data.home.carousel.card %}
@@ -56,7 +56,7 @@
   <section class="bottom-cta">
     <h2 class="editable">{{site.data.home.cta_text}}</h2>
     <div class="button alt">
-      <a href="{{site.data.home.link_cta}}"> {{site.data.home.cta}} </a>
+      <a class="try-it" href="{{site.data.home.link_cta}}"> {{site.data.home.cta}} </a>
     </div>
   </section>
 </div>

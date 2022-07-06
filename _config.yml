@@ -1,5 +1,3 @@
-# Welcome to Jekyll!
-#
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing these this file very often, consider using Jekyll's data files
@@ -16,7 +14,7 @@
 
 title: Rönd
 email: info@mia-platform.eu
-author: Mia-Platform
+author: rond-authz
 description: > # this means to ignore newlines until "baseurl:"
   Rönd is a lightweight container that distributes security policy enforcing throughout your application.
 
@@ -24,17 +22,18 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # This is mostly for testing
-url: "https://rond-authz.github.io/" # the base hostname & protocol for your site
+url: "https://rond-authz.io/"
 
 # Social (First three Required)
 repo: "https://github.com/rond-authz/rond"
+docs_repo: "https://github.com/rond-authz/rond-authz.github.io"
 github_user: "rond-authz"
 github_repo: "rond"
 github_branch: "master"
 
 # Optional
-twitter: MiaPlatform
-linkedin: mia-platform
+twitter: 
+linkedin: 
 # dockerhub: vanessa
 
 # Should there be feedback buttons at the bottom of pages?
