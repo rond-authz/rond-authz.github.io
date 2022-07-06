@@ -203,3 +203,8 @@ section+section {
 .carousel-element {
     padding: 10px;
 }
+
+.carousel-element img{
+    max-width: 210px;
+    max-height: 80px;
+}
