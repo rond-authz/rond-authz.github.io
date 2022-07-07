@@ -18,8 +18,8 @@ cards:
     subtitle: Learn how to wear the helmet (OPA policy), handle the Rönd shield and try some blocking techniques.
     image_file: /assets/img/Og-Rond.jpg
     image_alt: Screenshot 
-    cta_link: /sign-up/
-    # cta_text: &gt Try it
+    cta_link: https://github.com/rond-authz/rond
+    cta_text: &gt Try it
 
   - title: <strong>From “Karls” to “Jarls” of the solution.</strong>
     subtitle: Climb the viking society! Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and rise as a Jarl (Master) of the solution.
