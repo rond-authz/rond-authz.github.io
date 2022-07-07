@@ -16,7 +16,7 @@ title: Rönd
 email: info@mia-platform.eu
 author: rond-authz
 description: > # this means to ignore newlines until "baseurl:"
-  Rönd is a lightweight container that distributes security policy enforcing throughout your application.
+  Rönd is a lightweight container that distributes security policy enforcement throughout your application.
 
 # Add your baseurl here (your repository) but DO NOT CHANGE THE LINE NUMBER without editing .circleci/circle_urls.sh
 baseurl: "" # the subpath of your site, e.g. /blog
