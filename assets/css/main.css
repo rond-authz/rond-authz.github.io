@@ -4937,7 +4937,6 @@ input[type=button].btn-block {
     display: inline-block;
     padding-top: .3125rem;
     padding-bottom: .3125rem;
-    margin-right: 10rem;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap
@@ -5261,7 +5260,7 @@ input[type=button].btn-block {
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
-    flex-direction: row
+    flex-direction: row;
 }
 
 .navbar-expand .navbar-nav .dropdown-menu {
@@ -17933,7 +17932,9 @@ a.text-dark:focus {
     background: {{ site.color }};
     min-height: 4rem;
     margin: 0;
-    z-index: 32
+    z-index: 32;
+    display: flex;
+    gap: 0 16px;
 }
 
 @media(min-width:768px) {
@@ -17955,9 +17956,7 @@ a.text-dark:focus {
 }
 
 .td-navbar .navbar-brand svg {
-    display: inline-block;
-    margin: 0 10px;
-    height: 30px
+    height: 50px;
 }
 
 .td-navbar .nav-link {
@@ -18034,10 +18033,8 @@ html body .md-typeset .headerlink {
         padding-left: 0
     }
     .td-navbar .td-navbar-nav-scroll .navbar-nav {
-        padding-bottom: 2rem;
-        overflow-x: auto;
         white-space: nowrap;
-        -webkit-overflow-scrolling: touch
+        gap: 0 16px;
     }
 }
 
