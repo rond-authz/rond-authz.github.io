@@ -153,6 +153,7 @@ section+section {
 }
 
 .button.alt a:hover {
+    border: 2px solid #523BE4;
     background: #EDE7FC;
     cursor: pointer;
 }
