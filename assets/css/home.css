@@ -132,15 +132,15 @@ section+section {
     color: #fff;
     text-decoration: none;
     padding: 10px 30px;
-    background: #4182e4;
+    background: #523BE4;
     border-radius: 3px;
-    border: 1px solid rgba(255, 255, 255, .5);
+    border: 1px solid #523BE4;
     transition: .2s ease-in-out;
 }
 
 .button a:hover {
-    border: 1px solid #fff;
-    background: #4182e4;
+    border: 1px solid #7258E9;
+    background: #7258E9;
     cursor: pointer;
 }
 
@@ -154,8 +154,7 @@ section+section {
 
 .button.alt a:hover {
     background: #EDE7FC;
-    border: 2px solid #EDE7FC;
-    color: #523be4;
+    cursor: pointer;
 }
 
 .screenshot {
