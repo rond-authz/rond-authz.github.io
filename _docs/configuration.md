@@ -55,7 +55,7 @@ The x-permission attribute is shaped as an object with the following properties:
 - `resourceFilter` **(object)**: object representing information on what resource the API is looking for to perform filtering operations:
   - `rowFilter` **(object)**: this object contains all the configurations needed to perform filtering operation on rows:
     - `enabled` **(bool)**:  activation value for row filtering
-    - `headerName` **(string)**: identifier of the header sent to the requested service in which the interpolated query will be injected. The default values is `acl_rows`.
+    - `headerKey` **(string)**: identifier of the header sent to the requested service in which the interpolated query will be injected. The default values is `acl_rows`.
 - `responseFilter` **(object)**: this object contains all the configurations needed to perform filtering operation on response: 
   - `policy`: the name of the Rego policy that should be executed upon the API invocation.
 
@@ -79,7 +79,7 @@ For example, if you want the `greetings_read` policy to be evaluated when invoki
 
 If you want to generate a query you can enable the `resourceFilter` option; with this option you can enable query generation, 
 which will change the way the `allow` policy is threated, allowing you to write a policy that returns 
-a query that is then forwarded to the application service using the header specified with the `headerName` option. 
+a query that is then forwarded to the application service using the header specified with the `headerKey` option. 
 
 ```json
 {
@@ -91,7 +91,7 @@ a query that is then forwarded to the application service using the header speci
                     "resourceFilter": {
                         "rowFilter": {
                           "enabled": true,
-                          "headerName": "x-acl-rows"
+                          "headerKey": "x-acl-rows"
                         }
                     }
                 }
