@@ -1,7 +1,7 @@
 title: Security enforcement for your Cloud Native Solutions.
 subtitle: Embrace the Rönd shield and feel the power of mighty Vikings.
-button_link: 
-button_label: Download the example
+button_link: https://github.com/rond-authz/example
+button_label: Check out the example
 image_file: /assets/img/rond.png
 image_alt: Screenshot
 cta: Go to the Repo
