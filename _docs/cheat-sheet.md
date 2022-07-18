@@ -9,11 +9,11 @@ order: 4
 
 # Cheat sheet
 
-This document describes a few example of policies that can be written in Rego.
+This document describes a few examples of policies that can be written in Rego.
 
 ## Policies composition in OR
 
-This simple policy will accept only requests with method `GET` or `HEAD`, it uses assignment to define new values `:=` and equality checks `==`.
+This simple policy will accept only requests with method `GET` or `HEAD`. It uses assignment to define new values `:=` and equality checks `==`.
 
 ```
 my_policy {
@@ -27,7 +27,7 @@ my_policy {
 
 ## Array iteration
 
-Supposing that user properties have the `myList` which holds a list of strings you can iterate the list and find whether an element is found with comparisons.
+Supposing that user properties have the `myList` which holds a list of strings, you can iterate the list and find whether an element is found with comparisons.
 
 ```
 my_iteration_policy {
@@ -38,7 +38,7 @@ my_iteration_policy {
 
 ### Iterate multiple lists
 
-You can iterate over multiple lists using the same index by defining a custom iterator
+You can iterate over multiple lists using the same index by defining a custom iterator:
 
 ```
 my_iteration_policy {
@@ -53,8 +53,7 @@ my_iteration_policy {
 
 ## Query generation
 
-Suppose you want to create a query using the Query Generation feature of Rönd you have to use the `data.resources` variable to obtain the generator and
-define your comparising you want to be matched in the final query.
+If you want to create a query using the Query Generation feature of Rönd, you have to use the `data.resources` variable to obtain the generator and define your comparising you want to be matched in the final query.
 
 ```
 my_query_generator {
@@ -69,4 +68,4 @@ The policy above generates a query that will filter for all the documents having
 
 ## Debugging
 
-You can use the `print` statement to debug your policies, print statements are available only when `LOG_LEVEL` variable is set to `trace`.
+You can use the `print` statement to debug your policies. Print statements are available only when `LOG_LEVEL` variable is set to `trace`.
