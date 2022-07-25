@@ -24,6 +24,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # This is mostly for testing
 url: "https://rond-authz.io/"
 
+
 # Social (First three Required)
 repo: "https://github.com/rond-authz/rond"
 docs_repo: "https://github.com/rond-authz/rond-authz.github.io"

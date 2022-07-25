@@ -1,6 +1,7 @@
 ---
 title: News
 permalink: /news/
+meta_description: 
 ---
 
 # News

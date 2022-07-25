@@ -1,6 +1,7 @@
 ---
 title: About
 permalink: /about/
+meta_description: 
 ---
 
 # About
