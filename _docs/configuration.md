@@ -4,6 +4,7 @@ tags:
   - starter-kit
   - configuration
 description: Configure Rönd
+meta_description: 
 order: 2
 ---
 
