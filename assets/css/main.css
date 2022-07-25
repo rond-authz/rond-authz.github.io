@@ -250,7 +250,7 @@ dfn {
 
 b,
 strong {
-    font-weight: bolder
+    font-weight: 700
 }
 
 small {
@@ -18103,7 +18103,7 @@ html body .md-typeset .headerlink {
 }
 
 .td-sidebar-nav a:hover {
-    color: #72a1e5;
+    color: #0029CE;
     text-decoration: none
 }
 
@@ -18223,7 +18223,7 @@ html body .md-typeset .headerlink {
 }
 
 .td-toc #TableOfContents a:hover {
-    color: #72a1e5;
+    color: #0029CE;
     text-decoration: none
 }
 
