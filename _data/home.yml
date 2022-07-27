@@ -1,5 +1,5 @@
 title: Security enforcement for your Cloud Native Solutions.
-subtitle: Rönd is a lightweight container that define security policies on your APIs, running in your Kubernetes cluster.<br /><br /><strong>Embrace the Rönd shield and feel the power of the mighty Vikings.</strong>
+subtitle: Rönd is a lightweight container that defines security policies on your APIs, running in your Kubernetes cluster.<br /><br /><strong>Embrace the Rönd shield and feel the power of the mighty Vikings.</strong>
 button_link: https://github.com/rond-authz/example
 button_label: Check out the example
 image_file: /assets/img/rond.png
