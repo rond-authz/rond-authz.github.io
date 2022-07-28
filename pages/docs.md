@@ -2,7 +2,7 @@
 layout: page
 title: Documentation
 permalink: /docs/
-meta_description: 
+meta_description: Rönd Documentation:A developer guide to get started with the OSS open source authorization security enforcement.
 ---
 
 # Documentation

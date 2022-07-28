@@ -1,29 +1,31 @@
-title: Security enforcement for your Cloud Native Solutions
-subtitle: <strong>Rönd is a lightweight K8s sidecar that defines security policies on your APIs.</strong><br /><br />Embrace the Rönd shield and feel the power of the mighty Vikings.
+title: Open Source Security Enforcement over your APIs
+subtitle: <strong>Rönd is a lightweight K8s sidecar that defines security policies on your APIs.</strong>
 button_link: https://github.com/rond-authz/example
 button_label: Check out the example
 image_file: /assets/img/rond.png
 image_alt: Screenshot
 cta: Go to the Repo
-cta_text: Join the Wall of Shield formation and become a Rönd warrior.
-link_cta: https://github.com/rond-authz/rond
+cta_text: Join the Wall of Shield formation and become a Rönd warrior. Try it Out!
+link_cta: https://github.com/rond-authz/example
 cards: 
-  - title: <strong>A shield for your protection</strong>
-    subtitle: Rönd is a true shield that enables you to improve data security while providing full independence and 360-degree permission governance. <br /><br /><strong>Rönd is an authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks.</strong></br /></br />These building blocks allow you to create your access&#8209;security model based on the real function that people have in your organization, rather than the specific actions they need to perform.
+  - title: <strong>A shield that protects and authorizes</strong>
+    subtitle: Rönd is an open source authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks.</br/></br/>These building blocks allow you to create both an attribute-based access control (ABAC) and a role-based access control (RBAC) model. The system will be a true mirror of your organization and it will reflect the actual role people have and the specific actions they must perform.<br/><br/>Rönd acts like a true shield that enables you to improve data security while providing full independence and 360-degree permission governance.
     image_file: /assets/img/Rond-swordandaxe.png
-    image_alt: Screenshot
-
-  - title: <strong>Start your training as a warrior, with a click.</strong>
-    subtitle: Learn how to wear the helmet (OPA policy), handle the Rönd shield and try some blocking techniques.
-    image_file: /assets/img/Og-Rond.jpg
-    image_alt: Screenshot 
+    image_alt: rond-sword-and-axe 
     cta_link: https://github.com/rond-authz/rond
-    cta_text: &gt Try it
+    cta_text: &gt Go to the Repo
 
-  - title: <strong>From “Karls” to “Jarls” of the solution.</strong>
-    subtitle: Climb the viking society! Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and rise as a Jarl (Master) of the solution.
+  - title: <strong>A fully-equipped Viking warrior infrastructure</strong>
+    subtitle: Rönd wears armor made with the best technology on the market. Built on top of the OPA policy, it uses Rego language to write centralized policies to execute distributed environments.<br/><br/>Rönd relies on the Sidecar Container Pattern to avoid a single point of failure. This means that each pod has an extra container pattern in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization controls are successfully passed.
+    image_file:  \assets\img\drakkar-rond.png
+    image_alt: drakkar-rond
+    cta_link: https://rond-authz.io/docs/getting-started
+    cta_text: &gt Find it Out
+
+  - title: <strong>Climb the Viking Society with training and discipline.</strong>
+    subtitle: From “Karls” to “Jarls” of the solution. Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and rise as a Jarl (Master) of the solution.
     image_file: /assets/img/Rond-crown.png
-    image_alt: Screenshot 
+    image_alt: Rond-crown
     cta_link: https://rond-authz.github.io/docs/
     cta_text: &gt Go to Docs
 #carousel:
