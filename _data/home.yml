@@ -1,5 +1,5 @@
 title: Open Source Security Enforcement over your APIs
-subtitle: <strong>Rönd is a lightweight K8s sidecar that defines security policies on your APIs.</strong>
+subtitle: <strong>Rönd is a lightweight K8s sidecar that defines security policies over your APIs.</strong>
 button_link: https://github.com/rond-authz/example
 button_label: Check out the example
 image_file: /assets/img/rond.png
@@ -16,7 +16,7 @@ cards:
     cta_text: &gt Go to the Repo
 
   - title: <strong>A fully-equipped Viking warrior infrastructure</strong>
-    subtitle: Rönd wears armor made with the best technology on the market. Built on top of the OPA policy, it uses Rego language to write centralized policies to execute distributed environments.<br/><br/>Rönd relies on the Sidecar Container Pattern to avoid a single point of failure. This means that each pod has an extra container pattern in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization controls are successfully passed.
+    subtitle: Rönd wears armor made with the best technology on the market. Built on top of the OPA policy, it uses Rego language to write policy applied to APIs' calls.<br/><br/>It relies on the Sidecar Container Pattern to avoid a single point of failure. This means that each pod has an extra container pattern in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization controls are successfully passed.<br/><br/>Rönd simplifies security management with centralized policies executed in a distributed system. Forget endless lines of code, and focus only on the authorization rules.
     image_file:  \assets\img\drakkar-rond.png
     image_alt: drakkar-rond
     cta_link: https://rond-authz.io/docs/getting-started
