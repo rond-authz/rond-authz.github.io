@@ -1,5 +1,5 @@
 ---
-title: Cheat Sheet
+title: Rego Cheat Sheet
 tags:
   - cheat-sheet
   - tutorial
@@ -8,7 +8,7 @@ meta_description:
 order: 4
 ---
 
-# Cheat sheet
+# Rego Cheat sheet
 
 This document describes a few examples of policies that can be written in Rego.
 
@@ -16,7 +16,7 @@ This document describes a few examples of policies that can be written in Rego.
 
 This simple policy will accept only requests with method `GET` or `HEAD`. It uses assignment to define new values `:=` and equality checks `==`.
 
-```
+```rego
 my_policy {
     requestMethod := input.request.method
     requestMethod == "GET"
@@ -30,7 +30,7 @@ my_policy {
 
 Supposing that user properties have the `myList` which holds a list of strings, you can iterate the list and find whether an element is found with comparisons.
 
-```
+```rego
 my_iteration_policy {
     aList := input.user.properties.myList
     aList[_] == "item_to_find"
@@ -41,7 +41,7 @@ my_iteration_policy {
 
 You can iterate over multiple lists using the same index by defining a custom iterator:
 
-```
+```rego
 my_iteration_policy {
     aList := input.user.properties.myList
     anotherList := input.user.properties.myList2
@@ -56,7 +56,7 @@ my_iteration_policy {
 
 If you want to create a query using the Query Generation feature of Rönd, you have to use the `data.resources` variable to obtain the generator and define your comparising you want to be matched in the final query.
 
-```
+```rego
 my_query_generator {
     userBrand := input.user.properties.brandId
     generator := data.resources[_]
