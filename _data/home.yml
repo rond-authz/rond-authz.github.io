@@ -16,14 +16,14 @@ cards:
     cta_text: &gt Go to the Repo
 
   - title: <strong>A fully-equipped Viking warrior infrastructure</strong>
-    subtitle: With Rönd you wear an armor made with the best technologies on the market. Built on top of the OpenPolicy Agent, it leverages the Rego language to let you write policies to be applied to APIs calls.<br/><br/>It relies on the Sidecar Container Pattern to avoid any single point of failure introduction; this means that each pod has an extra container in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization controls are successfully passed.<br/><br/>Rönd simplifies security management with centralized policies executed in a distributed system. Forget endless controls embedded in your codebase, and focus only on the authorization rules.
+    subtitle: With Rönd you wear an armor made with the best technologies on the market. Built on top of Open Policy Agent, it leverages the Rego language to let you write policies to be applied to APIs calls.<br/><br/>It relies on the Sidecar Container Pattern to avoid any single point of failure introduction; this means that each pod has an extra container in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization controls are successfully passed.<br/><br/>Rönd simplifies security management with centralized policies executed in a distributed system. Forget endless controls embedded in your codebase, and focus only on the authorization rules.
     image_file:  \assets\img\drakkar-rond.png
     image_alt: drakkar-rond
     cta_link: https://rond-authz.io/docs/getting-started
     cta_text: &gt Find it Out
 
   - title: <strong>Climb the Viking Society with training and discipline.</strong>
-    subtitle: From “Karls” to “Jarls” of the solution. Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and rise as a Jarl (Master) of the solution.
+    subtitle: From “Karls” to “Jarls” of the solution. Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and rise as a Jarl (Master) of your authorization model!
     image_file: /assets/img/Rond-crown.png
     image_alt: Rond-crown
     cta_link: https://rond-authz.github.io/docs/
