@@ -10,13 +10,13 @@ order: 3
 
 # How to write a policy
 
-Since policies are executed with [OpenPolicy Agent](https://www.openpolicyagent.org), they must be written in the [Rego language](https://www.openpolicyagent.org/docs/latest/policy-reference/).
+Since policies are executed with [Open Policy Agent](https://www.openpolicyagent.org), they must be written in the [Rego language](https://www.openpolicyagent.org/docs/latest/policy-reference/).
 
 The whole set of Rego capabilities is supported. In addition to that, Rönd also provides a set of custom built-ins.
 
 ## Rego input
 
-Policies will receive a specifically crafted `input` object with information concerning the request. the `input` object is shaped as follows:
+Policies will receive a specifically crafted `input` object with information concerning the request. The `input` object is shaped as follows:
 
 ```json
 {
