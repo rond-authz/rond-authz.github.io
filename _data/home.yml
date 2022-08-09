@@ -1,7 +1,7 @@
 title: Open Source Security Enforcement over your APIs
 subtitle: <strong>Rönd is a lightweight K8s sidecar that defines security policies over your APIs.</strong>
-button_link: https://github.com/rond-authz/example
-button_label: Check out the example
+button_link: https://github.com/rond-authz/rond
+button_label: Check out the repo
 image_file: /assets/img/rond.png
 image_alt: Screenshot
 cta: Go to the Repo
@@ -12,8 +12,8 @@ cards:
     subtitle: Rönd is an open source authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks.</br/></br/>These building blocks allow you to create your security model leveraging both an Attribute-Based Access Control (ABAC) and a Role-Based Access Control (RBAC) approach. The system will be a true mirror of your organization and it will reflect the actual role people have and the specific actions they may perform.<br/><br/>Rönd acts like a true shield that enables you to improve data security and API while providing full independence and 360-degree permission governance.
     image_file: /assets/img/Rond-swordandaxe.png
     image_alt: rond-sword-and-axe 
-    cta_link: https://github.com/rond-authz/rond
-    cta_text: &gt Go to the Repo
+    cta_link: https://github.com/rond-authz/example
+    cta_text: &gt Try the example
 
   - title: <strong>A fully-equipped Viking warrior infrastructure</strong>
     subtitle: With Rönd you wear an armor made with the best technologies on the market. Built on top of Open Policy Agent, it leverages the Rego language to let you write policies to be applied to APIs calls.<br/><br/>It relies on the Sidecar Container Pattern to avoid any single point of failure introduction; this means that each pod has an extra container in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization controls are successfully passed.<br/><br/>Rönd simplifies security management with centralized policies executed in a distributed system. Forget endless controls embedded in your codebase, and focus only on the authorization rules.
