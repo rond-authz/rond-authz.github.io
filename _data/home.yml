@@ -4,9 +4,9 @@ button_link: https://github.com/rond-authz/rond
 button_label: Check out the repo
 image_file: /assets/img/rond.png
 image_alt: Screenshot
-cta: Go to the Repo
+cta: Try Rönd Example
 cta_text: Join the Wall of Shield formation and become a Rönd warrior.
-link_cta: https://github.com/rond-authz/rond
+link_cta: https://github.com/rond-authz/example
 cards: 
   - title: <strong>A shield that protects and authorizes</strong>
     subtitle: Rönd is an open source authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks.</br/></br/>These building blocks allow you to create your security model leveraging both an Attribute-Based Access Control (ABAC) and a Role-Based Access Control (RBAC) approach. The system will be a true mirror of your organization and it will reflect the actual role people have and the specific actions they may perform.<br/><br/>Rönd acts like a true shield that enables you to improve data security and API while providing full independence and 360-degree permission governance.
