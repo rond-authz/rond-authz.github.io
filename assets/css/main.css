@@ -4867,6 +4867,10 @@ input[type=button].btn-block {
     background-color: {{ site.color }}
 }
 
+.nav-item {
+    margin-left: 1rem;
+}
+
 .nav-fill .nav-item {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -5393,6 +5397,26 @@ input[type=button].btn-block {
 .navbar-dark .navbar-text a:hover,
 .navbar-dark .navbar-text a:focus {
     color: #fff
+}
+
+.centered {
+    text-align: center;
+}
+
+.why-rond-section {
+    padding: 30px 0 0 0;
+}
+
+.why-rond {
+    font-size: 1.2em;
+    color: #1E1E1E;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.38em;
+}
+
+.why-rond li {
+    padding: 15px;
 }
 
 .card,
