@@ -111,6 +111,22 @@ button {
     max-width: 1140px;
 }
 
+.why-rond-section {
+    padding: 30px 0 0 0;
+}
+
+.why-rond {
+    font-size: 1.2em;
+    color: #1E1E1E;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.38em;
+}
+
+.why-rond li {
+    padding: 15px;
+}
+
 section {
     padding: 80px 0;
 }
