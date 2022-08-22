@@ -10,7 +10,9 @@ order: 1
 # Getting Started with Rönd
 
 Rönd is responsible for handling authorization rules: it is useful to restrict access to specific resources and API.
-While it supports expressive authorization rules possible on the request data, it also provides primitives for implementing your [RBAC solution](#Rönd-and-rbac).
+While it supports expressive authorization rules possible on the request data, it also provides primitives for implementing your [RBAC solution](#Rönd-and-rbac).  
+  
+**We have prepared an easily configurable example to allow you to explore all the features of Rond. [You can find it inside the example repo](https://github.com/rond-authz/example)**
 
 ## Rönd Overview
 
