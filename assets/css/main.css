@@ -18008,6 +18008,7 @@ html body .md-typeset .headerlink {
 
 .headerlink {
   opacity: 0;
+  color: #523BE4 !important;
 }
 
 .headerlink:focus, .headerlink:hover {
