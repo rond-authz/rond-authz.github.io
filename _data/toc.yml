@@ -12,6 +12,19 @@
           url: "docs/getting-started#rönd-capabilities"
     - title: "Configuration"
       url: "docs/configuration"
+      children:
+        - title: Environment variables
+          url: "docs/configuration#environment-variables"
+        - title: Configuration files
+          url: "docs/configuration#configuration-files"
+        - title: OpenPolicy Agent policies
+          url: "docs/configuration#openpolicy-agent-policies"
+        - title: OpenAPI Specification file
+          url: "docs/configuration#openapi-specification-file"
+        - title: Rego package
+          url: "docs/configuration#rego-package"
+        - title: Standalone mode
+          url: "docs/configuration#standalone-mode"
     - title: "How to write a policy"
       url: "docs/policy-integration"
       children:
