@@ -9,21 +9,21 @@ cta_text: Join the Wall of Shield formation and become a Rönd warrior.
 link_cta: https://github.com/rond-authz/example
 cards: 
   - title: <strong>A shield that protects and authorizes</strong>
-    subtitle: Rönd is an open source authorization mechanism that defines the concepts of Roles, Permissions, and User Groups as building blocks.</br/></br/>These building blocks allow you to create your security model leveraging both an Attribute-Based Access Control (ABAC) and a Role-Based Access Control (RBAC) approach. The system will be a true mirror of your organization and it will reflect the actual role people have and the specific actions they may perform.<br/><br/>Rönd acts like a true shield that enables you to improve data security and API while providing full independence and 360-degree permission governance.
+    subtitle: Rönd is an <strong>open source authorization mechanism</strong> that defines the concepts of Roles, Permissions, and User Groups as building blocks.</br/></br/>These building blocks allow you to create your security model leveraging both an <strong>Attribute-Based Access Control</strong> (ABAC) and a <strong>Role-Based Access Control</strong> (RBAC) approach. The system will be a true mirror of your organization and it will reflect the actual role people have and the specific actions they may perform.<br/><br/>Rönd acts like a true shield that enables you to <strong>improve data security and API</strong> while providing full independence and 360-degree permission governance.
     image_file: /assets/img/Rond-swordandaxe.png
     image_alt: rond-sword-and-axe 
     cta_link: https://github.com/rond-authz/example
     cta_text: &gt Try the example
 
   - title: <strong>A fully-equipped Viking warrior infrastructure</strong>
-    subtitle: With Rönd you wear an armor made with the best technologies on the market. Built on top of Open Policy Agent, it leverages the Rego language to let you write policies to be applied to APIs calls.<br/><br/>It relies on the Sidecar Container Pattern to avoid any single point of failure introduction; this means that each pod has an extra container in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization controls are successfully passed.<br/><br/>Rönd simplifies security management with centralized policies executed in a distributed system. Forget endless controls embedded in your codebase, and focus only on the authorization rules.
+    subtitle: With Rönd you wear an armor made with the best technologies on the market. Built on top of <strong>Open Policy Agent</strong>, it leverages the <strong>Rego</strong> language to let you write policies to be applied to APIs calls.<br/><br/>It relies on the Sidecar Container Pattern to <strong>avoid any single point of failure</strong>; this means that each pod has an extra container in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization checks are successfully passed.<br/><br/>Rönd simplifies security management with <strong>centralized policies executed in a distributed system</strong>. Forget endless controls embedded in your codebase, and focus only on the authorization rules.
     image_file:  \assets\img\drakkar-rond.png
     image_alt: drakkar-rond
     cta_link: https://rond-authz.io/docs/getting-started
     cta_text: &gt Find it Out
 
   - title: <strong>Climb the Viking Society with training and discipline.</strong>
-    subtitle: From “Karls” to “Jarls” of the solution. Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and rise as a Jarl (Master) of your authorization model!
+    subtitle: From “Karls” to “Jarls” of the solution. Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and <strong>rise as a Jarl</strong> (Master) of your authorization model!
     image_file: /assets/img/Rond-crown.png
     image_alt: Rond-crown
     cta_link: https://rond-authz.github.io/docs/
