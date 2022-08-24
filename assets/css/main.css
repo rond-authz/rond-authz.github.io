@@ -3110,7 +3110,7 @@ fieldset:disabled a.btn {
 
 .btn-info {
     color: #fff;
-    background-color: #479de7;
+    background-color: #523BE4;
 }
 
 .btn-info:hover {
@@ -5954,7 +5954,7 @@ input[type=button].btn-block {
 
 .badge-info {
     color: #fff;
-    background-color: #479de7
+    background-color: #523BE4
 }
 
 .badge-info[href]:hover,
@@ -18299,12 +18299,12 @@ html body .md-typeset .headerlink {
 
 .alert-info {
     border-style: solid;
-    border-color: #479de7;
+    border-color: #523BE4;
     border-width: 0 0 0 4px
 }
 
 .alert-info .alert-heading {
-    color: #479de7;
+    color: #523BE4;
 }
 
 .alert-warning {
