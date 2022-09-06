@@ -1,5 +1,5 @@
 title: Open Source Security Enforcement over your APIs
-subtitle: <strong>Rönd is a lightweight K8s sidecar that defines security policies over your APIs.</strong>
+subtitle: <strong>A lightweight container for distributed security policy evaluation</strong>
 button_link: https://github.com/rond-authz/rond
 button_label: Check out the repo
 image_file: /assets/img/rond.png
