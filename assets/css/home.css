@@ -111,6 +111,22 @@ button {
     max-width: 1140px;
 }
 
+.rwd-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 30%;
+    padding-top: 30px;
+    position: relative;
+}
+.rwd-video iframe,
+.rwd-video object,
+.rwd-video embed {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 250px;
+}
+
 .why-rond-section {
     padding: 100px 0 0 0;
 }
