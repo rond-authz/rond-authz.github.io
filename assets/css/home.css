@@ -193,6 +193,32 @@ section+section {
     cursor: pointer;
 }
 
+.try-it-secondary {
+    background: #523be4;
+    border-radius: 45px;
+    border: 2px solid #523be4;
+    padding: 16px 50px;
+    color: #fff;
+}
+
+.try-it-secondary:hover {
+    border: 2px solid #523BE4;
+    background: #EDE7FC;
+    cursor: pointer;
+    color: #523BE4;
+    text-decoration: none;
+}
+
+#footer-cta {
+    display: inline-block;
+    margin: 25px;
+}
+
+#footer-cta-secondary {
+    display: inline-block;
+    margin: 25px;
+}
+
 .screenshot {
     max-width: 100%;
     height: auto;
