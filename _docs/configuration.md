@@ -31,6 +31,7 @@ To correctly setup the container, you need to provide a few configurations. Some
 | `BINDINGS_COLLECTION_NAME`   | `string`  | -                   | if `MONGODB_URL` is set    | Name of the bindings collection.                                                                                                                                                                  |
 | `PATH_PREFIX_STANDALONE`     | `string`  | `/eval`             | -                          | When in `STANDALONE` mode, this variables configures the prefix for all validation APIs defined by the OAS.                                                                                       |
 | `DELAY_SHUTDOWN_SECONDS`     | `int`     | **10**              | -                          | Seconds to delay forced server stop, useful for graceful shutdown.                                                                                                                                |
+| `EXPOSE_METRICS` | `boolean` | `true` | - | Set to false if you don't want to collect and expose the Prometheus metrics |
 
 ## Configuration files
 
