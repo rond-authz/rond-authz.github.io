@@ -20,8 +20,8 @@ Exposed metrics are:
 
 ## Grafana dashboards
 
-We have created a Grafana dashboard which use both Prometheus and Loki as data sources. <a download target="_blank" href="/assets/static/rond-dashboard.json">Click here</a> to download the json of the dashboard.
+We have created a Grafana dashboard which uses both Prometheus and Loki as data sources. <a download target="_blank" href="/assets/static/rond-dashboard.json">Click here</a> to download the json of the dashboard.
 
 #### Disable metrics
 
-To disable the collection of metrics, set the environment variables `EXPOSE_METRICS` to `false`. This will avoid to expose the metrics route.
+To disable the collection of metrics, set the environment variables `EXPOSE_METRICS` to `false`. This will also prevent the exposition of the metrics collection route.
