@@ -10,6 +10,12 @@ order: 4
 
 # Metrics
 
+{%
+  include alert.html
+  type="info"
+  content="This feature is available from version v1.6.2"
+%}
+
 By default, Rönd exposes the Prometheus metrics in the OpenMetrics format. The path at which this metrics are exposed is `/-/rond/metrics`.
 
 Exposed metrics are:
