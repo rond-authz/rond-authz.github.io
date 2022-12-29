@@ -47,9 +47,9 @@ The OpenAPI Specification file is required only when the `TARGET_SERVICE_OAS_PAT
 
 #### Specify API permissions
 
-In order to define the Rego policies to be evaluated for the API to be authorized, you must define the custom attribute `x-permission` in your OAS schema.
+In order to define the Rego policies to be evaluated for the API to be authorized, you must define the custom attribute `x-rond` in your OAS schema.
 
-The x-permission attribute is shaped as an object with the following properties:
+The `x-rond` attribute is shaped as an object with the following properties:
 
 - `allow` **(string, required)**: The name of the Rego policy that should be executed upon the API invocation;
 - `options` **(object)**:
@@ -74,7 +74,7 @@ For example, if you want the `greetings_read` policy to be evaluated when invoki
     "paths": {
         "/hello": {
             "get": {
-                "x-permission": {
+                "x-rond": {
                     "allow": "greetings_read"
                 }
             }
@@ -85,14 +85,15 @@ For example, if you want the `greetings_read` policy to be evaluated when invoki
 
 If you want to generate a query, you can enable the `resourceFilter` option.
 With this option you can enable query generation, which will change the way the `allow` policy is treated. 
-This allows you to write a policy that returns a query that is then forwarded to the application service using the header specified with the `headerKey` option.
+This allows you to write a policy that returns a query that is then forwarded to the application service using the header specified with the `headerKey` option.  
+For more details check the [Rows Filtering guide](/docs/policy-integration#rows-filtering).
 
 ```json
 {
     "paths": {
         "/hello": {
             "get": {
-                "x-permission": {
+                "x-rond": {
                     "allow": "greetings_read",
                     "resourceFilter": {
                         "rowFilter": {
@@ -116,7 +117,7 @@ When the application service sends its response, the `filter_response_example` p
     "paths": {
         "/hello": {
             "get": {
-                "x-permission": {
+                "x-rond": {
                     "allow": "greetings_read",
                     "responseFilter": {
                       "policy": "filter_response_example"
@@ -130,21 +131,6 @@ When the application service sends its response, the `filter_response_example` p
 
 
 > Any API invocation to the path matching the one provided as `TARGET_SERVICE_OAS_PATH` with method `GET` will always be proxied to the target service, unless the given OpenAPI Specification provides the path with a custom policy configuration. In this case, the API will be proxied only if the policy evaluates successfully.
-
-
-### Rego package
-
-In order to execute policy a valuation, a Rego package file is required. You have to provide it inside the directory specified with the `OPA_MODULES_DIRECTORY` environment variable.
-
-{%
-  include alert.html
-  type="warning"
-  content="Please be careful, since the package **must** be named `policies`, so the Rego file must start as follows:"
-%}
-
-```go
-package policies
-```
 
 ## Standalone mode
 
