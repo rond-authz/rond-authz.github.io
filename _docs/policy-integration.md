@@ -122,13 +122,13 @@ api_key {
 
 In alternative, Rönd provides a set of [built-in functions](/docs/policy-integration#custom-built-ins) like the [`get_header`](/docs/policy-integration#get_header) one.
 
-For a more complete set of available functions please check out the [Rönd cheat-sheet](https://rond-authz.io/docs/cheat-sheet).  
+For a more complete set of available functions please check out the [Rönd cheat-sheet](/docs/cheat-sheet).  
 You can find out other real examples on our [examples repository on GitHub](https://github.com/rond-authz/example). 
 
 
 ### Rows Filtering
 
-Sometimes you need to filter out some results basing on the rights or on the role of the current user.  
+Sometimes you need to filter out some results based on the user privileges.  
 When defining a policy with `requestFlow` 
 Rönd can automatically generate a query for your DBMS coming from the evaluation of the permissions of a user.  
 This query is then passed to the requested service through the header specified by the `headerName` field in your [OAS Schema](/docs/configuration#openapi-specification-file).
@@ -149,7 +149,7 @@ In order for Rönd to perform this query generation, you need to configure the `
 
 ### Response Filtering
 
-Sometimes you need to filter out or manipulate some fields in the response before sending it to the final target. This case is known as `Response Filtering`.  
+Sometimes you need to filter out or manipulate some fields in the response before sending it to the client This case is known as `Response Filtering`.  
 Rönd allows you to manipulate the response body directly in a policy.
 
 Unlike Request policies where policies returns a boolean value, Response Filtering policies should return a set that represents the new response object.  
@@ -158,7 +158,7 @@ For more details about sets, check out the [OPA documentation](https://www.openp
 The policy MUST respect the syntax:
 
 ``` rego
-policy_name[return_value]{
+policy_name [return_value] {
    somePolicyContent == true
    return_value := "the body of the response"
 }
@@ -167,7 +167,7 @@ policy_name[return_value]{
 And MUST return the new value of the modified data:
 
 ```rego
-filter_response_example[result] {
+filter_response_example [result] {
    body := input.request.body
    result := object.remove(body, ["someField"])
 }
