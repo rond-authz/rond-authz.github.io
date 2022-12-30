@@ -32,17 +32,11 @@
       children:
         - title: Rego Input
           url: "docs/policy-integration#rego-input"
-        - title: Rego Package
-          url: "docs/policy-integration#rego-package"
-        - title: Example of a policy
-          url: "docs/policy-integration#example-of-a-policy"
-        - title: RBAC data model
-          url: "docs/policy-integration#rbac-data-model"
-        - title: Rows filtering
-          url: "docs/policy-integration#rows-filtering"
-        - title: Response filtering
-          url: "docs/policy-integration#response-filtering"
-        - title: Custom built-ins
+        - title: Rego Policies 101
+          url: "docs/policy-integration#rego-policies-101"
+        - title: Custom Built-ins
           url: "docs/policy-integration#custom-built-ins"
+        - title: RBAC Data Model
+          url: "docs/policy-integration#rbac-data-model"
     - title: "Cheat Sheet"
       url: "docs/cheat-sheet"

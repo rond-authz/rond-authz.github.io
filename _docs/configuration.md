@@ -47,19 +47,63 @@ The OpenAPI Specification file is required only when the `TARGET_SERVICE_OAS_PAT
 
 #### Specify API permissions
 
-In order to define the Rego policies to be evaluated for the API to be authorized, you must define the custom attribute `x-rond` in your OAS schema.
+In order to define the Rego policies to be evaluated for the API to be authorized, you must define the Rönd custom attribute in your OAS schema.  
+Depending on the version of Rönd you are using, you have define `x-rond` or `x-permission` attirbutes.
 
-The `x-rond` attribute is shaped as an object with the following properties:
+**For version 1.5 or newer**, Rönd lets you define the `x-rond` attribute in your OAS schema.
+This attribute is an object that contains the following properties:
+```json
+"x-rond": {
+    "requestFlow": {
+        "policyName": "generate_filter",
+        "generateQuery": true,
+        "queryOptions": {
+            "headerName": "x-query-header"
+        }
+    },
+    "responseFlow": {
+        "policyName": "responsepolicy"
+    },
+    "options": {
+        "enableResourcePermissionsMapOptimization": false
+    }
+}
+```
 
-- `allow` **(string, required)**: The name of the Rego policy that should be executed upon the API invocation;
-- `options` **(object)**:
-  - `enableResourcePermissionsMapOptimization` **(boolean)**: Flag to enable the generation of an optimized map of user permissions (useful when performing RBAC logics). More information available in the [Policy Integration page](policy-integration);
-- `resourceFilter` **(object)**: Object representing information on what resource the API is looking for to perform filtering operations:
-  - `rowFilter` **(object)**: This object contains all the configurations needed to perform filtering operation on rows:
-    - `enabled` **(bool)**: Activation value for row filtering;
-    - `headerKey` **(string)**: Identifier of the header sent to the requested service in which the interpolated query will be injected. The default values is `acl_rows`;
-- `responseFilter` **(object)**: This object contains all the configurations needed to perform filtering operation on response:
-  - `policy`: The name of the Rego policy that should be executed upon the API invocation.
+**For older versions** the `x-permission` attribute should be used.  
+This attribute is shaped as an object with the following properties:
+```json
+"x-permission": {
+    "allow": "name_of_the_policy_to_execute_upon_API_invocation", // Required.
+    "resourceFilter": {
+        "rowFilter": {
+            "enabled": true,
+            "headerKey": "acl_rows" // Identifier of the header sent to the requested service. The interpolated query will be injected Here. Defaults to `acl_rows`.
+        }
+    },
+    "responseFilter": {
+        "policy": "name_of_the_policy_to_execute_upon_API_invocation"
+    },
+    "options": {
+        "enableResourcePermissionsMapOptimization": false
+    },
+}
+```
+
+{%
+  include alert.html
+  type="info"
+  content="The `enableResourcePermissionsMapOptimization` flag enables the generation of an optimized map of user permissions. This is useful when performing RBAC logics.  
+  More information available in the [Policy Integration page](policy-integration)"
+%}
+
+{%
+  include alert.html
+  type="warning"
+  content="For Rönd versions **older than 1.5**, when defining the `resourceFilter` attribute, Rönd changes the behavior of the `allow` policy.  
+  This allows you to write a policy that returns a query that is then forwarded to the application service using the header specified with the `headerKey` option.  
+  For more details check the [Rows Filtering guide](/docs/policy-integration#rows-filtering)."
+%}
 
 {%
   include alert.html
@@ -67,7 +111,9 @@ The `x-rond` attribute is shaped as an object with the following properties:
   content="Please note that any API that is not specified is immediately blocked."
 %}
 
-For example, if you want the `greetings_read` policy to be evaluated when invoking the `GET /hello` API, your custom service must define its API documentation as follows:
+#### Request Flow
+
+If you want the `greetings_read` policy to be evaluated when invoking the `GET /hello` API, your application service must define its API documentation as follows:
 
 ```json
 {
@@ -75,7 +121,9 @@ For example, if you want the `greetings_read` policy to be evaluated when invoki
         "/hello": {
             "get": {
                 "x-rond": {
-                    "allow": "greetings_read"
+                    "requestFlow": {
+                        "policyName": "greetings_read"
+                    }
                 }
             }
         }
@@ -83,9 +131,10 @@ For example, if you want the `greetings_read` policy to be evaluated when invoki
 }
 ```
 
-If you want to generate a query, you can enable the `resourceFilter` option.
-With this option you can enable query generation, which will change the way the `allow` policy is treated. 
-This allows you to write a policy that returns a query that is then forwarded to the application service using the header specified with the `headerKey` option.  
+#### Generate a query for the service
+
+If you want to generate a query that is then forwarded to the application service, you can define the `requestFlow` option enabling the `generateQuery` field.  
+The generated query is then forwarded to the application service using the header specified in the `headerName` field.  
 For more details check the [Rows Filtering guide](/docs/policy-integration#rows-filtering).
 
 ```json
@@ -94,11 +143,11 @@ For more details check the [Rows Filtering guide](/docs/policy-integration#rows-
         "/hello": {
             "get": {
                 "x-rond": {
-                    "allow": "greetings_read",
-                    "resourceFilter": {
-                        "rowFilter": {
-                          "enabled": true,
-                          "headerKey": "x-acl-rows"
+                    "requestFlow": {
+                        "policyName": "greetings_read",
+                        "generateQuery": true,
+                        "queryOptions": {
+                            "headerName": "x-acl-rows"
                         }
                     }
                 }
@@ -108,7 +157,9 @@ For more details check the [Rows Filtering guide](/docs/policy-integration#rows-
 }
 ```
 
-If you need to modify the response payload you can add the `responseFilter`field. 
+#### Response Flow
+
+If you need to modify the response payload you can define the `responseFlow` field. 
 With the configuration shown below, the `greetings_read` policy will be evaluated before contacting the application service.
 When the application service sends its response, the `filter_response_example` policy will be evaluated and its result will be used as the new response body.
 
@@ -118,9 +169,11 @@ When the application service sends its response, the `filter_response_example` p
         "/hello": {
             "get": {
                 "x-rond": {
-                    "allow": "greetings_read",
-                    "responseFilter": {
-                      "policy": "filter_response_example"
+                    "requestFlow": {
+                        "policyName": "greetings_read",
+                    },
+                    "responseFlow": {
+                        "policyName": "filter_response_example"
                     }
                 }
             }
