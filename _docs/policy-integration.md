@@ -69,38 +69,13 @@ The `resourcePermissionsMap` is a map containing a set of key/value pairs. The k
 
 ### Rego package
 
-In order to execute policy a valuation, a Rego package file is required. You have to provide it inside the directory specified with the `OPA_MODULES_DIRECTORY` environment variable.
-
-{%
-  include alert.html
-  type="warning"
-  content="Since the package **must** be named `policies`, the Rego file must start as follows:"
-%}
+In order to execute policy a valuation, a Rego package file is required. You have to provide it inside the directory specified with the `OPA_MODULES_DIRECTORY` environment variable.  
+Since the package **must** be named `policies`, the Rego file must start as follows:
 
 ```go
 package policies
 
 // Write your policy here ...
-```
-{%
-  include alert.html
-  type="warning"
-  content="Since the **`.` character is not supported by Rego** in the policy name, we suggest to use `_` character when defining policy names:"
-%}
-
-```go
-package policies
-
-the_policy_name {
-  // Your validations here ...
-}
-```
-```rego
-"x-rond": {
-   "requestFlow": {
-      "policyName": "the_policy_name"  # note the '_' in the policy name
-   }
-}
 ```
 
 ## Rego Policies 101
