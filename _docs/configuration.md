@@ -83,7 +83,7 @@ Here, `requestFlow` and `responseFlow` fields, define which policies have to be 
 This attribute is shaped as an object with the following properties:
 ```json
 "x-permission": {
-    "allow": "name_of_the_policy_to_execute_upon_API_invocation", // Required.
+    "allow": "policy_to_be_executed_BEFORE_API_invocation", // Required.
     "resourceFilter": {
         "rowFilter": {
             "enabled": true,
@@ -91,7 +91,7 @@ This attribute is shaped as an object with the following properties:
         }
     },
     "responseFilter": {
-        "policy": "name_of_the_policy_to_execute_upon_API_invocation"
+        "policy": "policy_to_be_executed_AFTER_API_invocation"
     },
     "options": {
         "enableResourcePermissionsMapOptimization": false
