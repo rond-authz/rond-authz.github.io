@@ -55,20 +55,29 @@ This attribute is an object that contains the following properties:
 ```json
 "x-rond": {
     "requestFlow": {
-        "policyName": "generate_filter",
+        "policyName": "policy_to_be_executed_BEFORE_API_invocation",
         "generateQuery": true,
         "queryOptions": {
             "headerName": "x-query-header"
         }
     },
     "responseFlow": {
-        "policyName": "responsepolicy"
+        "policyName": "policy_to_be_executed_AFTER_API_invocation"
     },
     "options": {
         "enableResourcePermissionsMapOptimization": false
     }
 }
 ```
+
+Here, `requestFlow` and `responseFlow` fields, define which policies have to be executed repectively before and after the API invocation.
+
+{%
+  include alert.html
+  type="info"
+  content="The `generateQuery` flag defines wether or not a query has to be generated and then forwarded to the application service through the header specified in the `headerName` field."
+%}
+
 
 **For older versions** the `x-permission` attribute should be used.  
 This attribute is shaped as an object with the following properties:
