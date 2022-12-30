@@ -109,7 +109,7 @@ This attribute is shaped as an object with the following properties:
 {%
   include alert.html
   type="warning"
-  content="For Rönd versions **older than 1.5**, when defining the `resourceFilter` attribute, Rönd changes the behavior of the `allow` policy.  
+  content="For Rönd versions **older than 1.5**, you should define the `resourceFilter` attribute.  
   This allows you to write a policy that returns a query that is then forwarded to the application service using the header specified with the `headerKey` option.  
   For more details check the [Rows Filtering guide](/docs/policy-integration#rows-filtering)."
 %}
