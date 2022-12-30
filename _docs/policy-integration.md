@@ -429,7 +429,7 @@ package policies
 allow {
    input.request.method == "GET"
    resource := data.resources[_]
-   resource.userId == input.user.userId
+   resource.userId == input.userId
    resource.age >= 20
    resource.age <= 30
 }
@@ -441,10 +441,7 @@ Given the following input to the permission evaluator:
    {
       "input": {
          "method": "GET",
-         "user": {
-            "userId": 12345,
-            "age": 24
-         }
+         "userId": 12345
       }
    }
 ]
