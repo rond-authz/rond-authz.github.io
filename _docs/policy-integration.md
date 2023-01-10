@@ -103,10 +103,22 @@ You can find out other real examples on our [examples repository on GitHub](http
 
 ### Rows Filtering
 
-Sometimes you need to filter out some results based on the user privileges.  
-When defining a policy with `requestFlow` 
-Rönd can automatically generate a query for your DBMS coming from the evaluation of the permissions of a user.  
+Sometimes you may need to filter out some results (e.g. basing on user privileges).  
+When defining a policy with `requestFlow`, Rönd can automatically generate a query for your DBMS coming from the evaluation of the permissions of a user.
+
+To do this, just set `"generateQuery": true` inside the `requestFlow` object in your OAS schema.
+
+Rönd will now provide you the iterable `data.resources[_]` to build up the query. 
+You can use it to perform any kind of comparison between it and anything you want from the input or maybe a constant value.  
+We remind you that the query will be built from the field name of the `resource` object accessed in the permission.
+
 This query is then passed to the requested service through the header specified by the `headerName` field in your [OAS Schema](/docs/configuration#openapi-specification-file).
+
+{%
+  include alert.html
+  type="warning"
+  content="To build your query remember to assign to `data.resources[_]` iterable the same properties you have defined in the data model you need to be queried."
+%}
 
 {%
   include alert.html
@@ -114,13 +126,148 @@ This query is then passed to the requested service through the header specified 
   content="For Rönd versions **older than 1.5**, the `headerKey` field of your OAS Schema should be used."
 %}
 
-In order for Rönd to perform this query generation, you need to configure the `MONGODB_URL`, `ROLES_COLLECTION_NAME` and `BINDINGS_COLLECTION_NAME` variables.
-
 {%
   include alert.html
   type="warning"
-  content="If `MONGODB_URL` variable is set, then the envs `ROLES_COLLECTION_NAME` and `BINDINGS_COLLECTION_NAME` are required."
+  content="Policy for row filtering does not support the `default` declaration.  
+  E.g: `default allow = true`. Using it will prevent any filter to be generated."
 %}
+
+Let's see it in action:
+``` json
+"x-rond": {
+   "requestFlow": {
+      "policyName": "generate_query_policy_name",
+      "generateQuery": true,
+      "queryOptions": {
+         "headerName": "x-query-header"
+      }
+   },
+}
+```
+
+``` rego
+package policies
+
+generate_query_policy_name {
+   input.request.method == "GET"
+   resource := data.resources[_]
+   resource._id == input.user.userId
+   resource.description == "this is the user description"
+}
+
+generate_query_policy_name {
+   input.request.method == "GET"
+   resource := data.resources[_]
+   resource.managerId == input.user.userId
+   resource.name == input.request.path[1]
+}
+```
+
+In the example above, given a valid rows filtering configuration, the policy requires that the requested resource details can be retrieved by the user and by its manager.  
+This way, given the following input to the permission evaluator:
+```json
+[
+   {
+      "input": {
+         "method": "GET",
+         "request": { "path": ["resource", "654321"], },
+         "user": { "userId": "123456", }
+      }
+   }
+]
+```
+
+The request is accepted and in the header specified by `headerName` we can find the following object representing a MongoDB query:
+```json
+[
+   {
+      "$or":[
+         {
+            "$and":[
+               {
+                  "_id":{
+                     "$eq":"123456"
+                  }
+               },
+               {
+                  "description":{
+                     "$eq":"this is the user description"
+                  }
+               }
+            ]
+         },
+         {
+            "$and":[
+               {
+                  "managerId":{
+                     "$eq":"123456"
+                  }
+               },
+               {
+                  "_id":{
+                     "$eq":"654321"
+                  }
+               }
+            ]
+         }
+      ]
+   }
+]
+```
+
+Let's inspect another use case.  
+This time we want to allow the request only if the user is between 20 and 30 years old.
+
+```rego
+package policies
+
+check_user_age {
+   input.request.method == "GET"
+   resource := data.resources[_]
+   resource._id == input.userId
+   resource.age >= 20
+   resource.age <= 30
+}
+```
+
+Given the following input to the permission evaluator:
+```json
+[
+   {
+      "input": {
+         "method": "GET",
+         "userId": 12345
+      }
+   }
+]
+```
+
+The request is accepted and in the header specified by `headerName` we can find the following object representing a MongoDB query:
+```json
+[
+   {
+      "$and":[
+         {
+            "_id":{
+               "$eq":12345
+            }
+         },
+         {
+            "age":{
+               "$gte":20
+            }
+         },
+         {
+            "age":{
+               "$lte":30
+            }
+         }
+      ]
+   }
+]
+```
+
 
 ### Response Filtering
 
@@ -225,8 +372,17 @@ rider.riderId == input.request.pathParams.riderId
 
 ## RBAC Data Model
 
-When the variables `MONGODB_URL`, `ROLES_COLLECTION_NAME` and `BINDINGS_COLLECTION_NAME` are set, Rönd can perform checks over the user permissions.  
-These permissions, in the form of ***Roles*** and ***Bindings***, are then provided in the `input` object: in this way your policy can operate according to your needs, based on user actual permissions.  
+In order for Rönd to perform checks over users permissions, you need to configure the `MONGODB_URL`, `ROLES_COLLECTION_NAME` and `BINDINGS_COLLECTION_NAME` variables.
+
+When these variables are configured, Rönd will fetch users permissions data from the specified sources.  
+These permissions will be then provided with the two iterables `input.user.roles[_]` and `input.user.bindings[_]`.  
+You can now use these two iterables to build up your policy according to your needs.
+
+{%
+  include alert.html
+  type="warning"
+  content="If `MONGODB_URL` variable is set, then the envs `ROLES_COLLECTION_NAME` and `BINDINGS_COLLECTION_NAME` are required."
+%}
 
 {%
   include alert.html
@@ -296,153 +452,12 @@ This collection contains all the bindings between users or groups of users and a
 
 ### RBAC Policies for permission evaluation
 
-Any RBAC policy is provided with the iterable `data.resources[_]`. This structure is used to build up the query. 
-You can use it to perform any kind of comparison between it and anything you want from the input or maybe a constant value.  
-We remind you that the query will be built from the field name of the resource object accessed in the permission.
-
-{%
-  include alert.html
-  type="warning"
-  content="To build your query remember to assign to `data.resources` iterable the same properties you have defined in the data model you need to be queried."
-%}
-
-
+Let's check, in the following example, if the user have the permission to read some data:  
 ```rego
 package policies
 
-filter_projects_example {
-   bindings := input.user.bindings[_]
-   resource := data.resources[_]
-   resource._id == bindings.resource.resourceId
+has_read_permission {
+   userRoles := input.user.roles[_]
+   userRoles.permissions[_] == "can_read"
 }
-```
-
-In the example below, given a valid rows filtering configuration, the `allow` policy requires that the requested resource details can be retrieved by the user and by its manager.
-
-```rego
-package policies
-
-allow {
-   input.request.method == "GET"
-   resource := data.resources[_]
-   resource.name == input.user
-   resource.description == "this is the user description"
-}
-
-allow {
-   input.request.method == "GET"
-   resource := data.resources[_]
-   resource.manager == input.user
-   resource.name == input.path[1]
-}
-```
-
-{%
-  include alert.html
-  type="warning"
-  content="Policy for row filtering does not support the `default` declaration.  
-  E.g: `default allow = true`. Using it will prevent any filter to be generated."
-%}
-
-Given the following input to the permission evaluator:
-```json
-[
-   {
-      "input": {
-          "method": "GET",
-          "path": ["resource", "bob"],
-          "user": "alice"
-      }
-   }
-]
-```
-
-The request is accepted and in the header specified by `headerName` we can find the following object representing a MongoDB query:
-```json
-[
-   {
-      "$or":[
-         {
-            "$and":[
-               {
-                  "name":{
-                     "$eq":"alice"
-                  }
-               },
-               {
-                  "description":{
-                     "$eq":"this is the user description"
-                  }
-               }
-            ]
-         },
-         {
-            "$and":[
-               {
-                  "manager":{
-                     "$eq":"alice"
-                  }
-               },
-               {
-                  "name":{
-                     "$eq":"bob"
-                  }
-               }
-            ]
-         }
-      ]
-   }
-]
-```
-
-Let's inspect another use case.  
-This time we want to allow the request only if the user at least 20 years old.
-
-```rego
-package policies
-
-allow {
-   input.request.method == "GET"
-   resource := data.resources[_]
-   resource.userId == input.userId
-   resource.age >= 20
-   resource.age <= 30
-}
-```
-
-Given the following input to the permission evaluator:
-```json
-[
-   {
-      "input": {
-         "method": "GET",
-         "userId": 12345
-      }
-   }
-]
-```
-
-The request is accepted and in the header specified by `headerName` we can find the following object representing a MongoDB query:
-```json
-[
-   {
-      "$and":[
-         {
-            "userId":{
-               "$eq":12345
-            }
-         },
-         {
-            "age":{
-               "$gte":20
-            }
-         },
-         {
-            "age":{
-               "$lte":30
-            }
-         }
-      ]
-   }
-]
 ```
