@@ -32,9 +32,11 @@
       children:
         - title: Rego Input
           url: "docs/policy-integration#rego-input"
-        - title: RBAC data model
-          url: "docs/policy-integration#rbac-data-model"
-        - title: Custom built-ins
+        - title: Rego Policies 101
+          url: "docs/policy-integration#rego-policies-101"
+        - title: Custom Built-ins
           url: "docs/policy-integration#custom-built-ins"
+        - title: RBAC Data Model
+          url: "docs/policy-integration#rbac-data-model"
     - title: "Cheat Sheet"
       url: "docs/cheat-sheet"
