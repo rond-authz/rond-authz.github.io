@@ -296,12 +296,6 @@ filter_response_example [result] {
 ```
 
 {%
-   include alert.html
-   type="warning"
-   content=""
-%}
-
-{%
   include alert.html
   type="warning"
   content="Response filtering is applied only if the response Content Type is `application/json`.  
