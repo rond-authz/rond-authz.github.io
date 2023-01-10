@@ -142,7 +142,7 @@ Let's see it in action:
       "queryOptions": {
          "headerName": "x-query-header"
       }
-   },
+   }
 }
 ```
 
@@ -171,8 +171,8 @@ This way, given the following input to the permission evaluator:
    {
       "input": {
          "method": "GET",
-         "request": { "path": ["resource", "654321"], },
-         "user": { "userId": "123456", }
+         "request": { "path": ["resource", "654321"] },
+         "user": { "userId": "123456" }
       }
    }
 ]
