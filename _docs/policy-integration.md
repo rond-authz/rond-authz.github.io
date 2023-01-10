@@ -19,7 +19,7 @@ The whole set of Rego capabilities is supported. In addition to that, Rönd also
 Rönd provides policies a special `input` object.  
 This object contains information concerning the request and is shaped as follows:
 
-```json
+```
 {
   "request": {
     "method":  String,
