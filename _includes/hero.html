@@ -64,9 +64,11 @@
       </div>
       <div class="carousel-container">
         {% for logo in site.data.home.carousel.card %}
+        <a href="{{logo.image_link}}" target="_blank" rel="noopener">
           <div class="carousel-element">
               <img src="{{logo.image_file}}" alt="{{logo.image_alt}}" />
           </div>
+        </a>
         {% endfor %}
       </div>
     </div>

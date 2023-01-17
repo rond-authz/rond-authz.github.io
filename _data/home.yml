@@ -30,9 +30,25 @@ cards:
     image_alt: Rond-crown
     cta_link: https://rond-authz.github.io/docs/
     cta_text: &gt Go to Docs
-#carousel:
-#  intro: Our Mighty Warriors
-#  card: 
-#   - image_file: assets/img/mia-platform_logo.png
-#     image_alt: "Mia-Platform"
+carousel:
+  intro: Our Mighty Warriors
+  card: 
+    - image_file: /assets/img/warriors-logos/cattolica-assicurazioni_logo.png
+      image_alt: "Cattolica Assicurazioni"
+      image_link: https://www.cattolica.it/
+
+    - image_file: /assets/img/warriors-logos/md-concierge_logo.png
+      image_alt: "MD Concierge"
+      image_link: https://www.mdconcierge.it/en/
+
+    - image_file: /assets/img/warriors-logos/mia-care_logo.png
+      image_alt:  "Mia-Care"
+      image_link: https://mia-care.io/
+
+    - image_file: /assets/img/warriors-logos/mia-platform_logo.png
+      image_alt: "Mia-Platform"
+      image_link: https://mia-platform.eu
    
+    - image_file: /assets/img/warriors-logos/rb-digital_logo.png
+      image_alt:  "RBdigital"
+      image_link: https://previdigital.com/
