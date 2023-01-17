@@ -1,6 +1,6 @@
 <section class="hero col-12">
   <div class="text-container" style="z-index:1">
-    <h1 class="editable">{{site.data.home.title}}</h1>
+    <h1 class="editable" id="{{site.data.home.title | strip_html | slugify}}">{{site.data.home.title}}</h1>
     <p class="subtext editable">{{site.data.home.subtitle}}</p>
     <div class="cta button alt">
       {% if site.data.home.button_link %}
@@ -38,7 +38,7 @@
   <section>
     <div class="container flex">
       <div class="text editable">
-        <h2 class="black-text">{{card.title}}</h2>
+        <h2 class="black-text" id="{{card.title | strip_html | slugify}}">{{card.title}}</h2>
         <p>{{card.subtitle}}</p>
         {% if card.cta_link %}
         <p>
@@ -60,7 +60,7 @@
   <section>
     <div class="container">
       <div class="col-12">
-        <h2 class="black-text" id="{{site.data.home.carousel.intro}}">{{site.data.home.carousel.intro}}</h2>
+        <h2 class="black-text" id="{{site.data.home.carousel.intro | slugify}}">{{site.data.home.carousel.intro}}</h2>
       </div>
       <div class="carousel-container">
         {% for logo in site.data.home.carousel.card %}

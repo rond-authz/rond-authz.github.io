@@ -3,11 +3,10 @@ layout: null
 excluded_in_search: true
 ---
 
-
 body,
 html {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     background: #E1F1FE;
 }
 
@@ -143,7 +142,9 @@ button {
 }
 
 .why-rond li {
-    padding: 20px;
+    padding: 8px;
+    list-style: none;
+    text-align: center;
 }
 
 section {
