@@ -2,7 +2,7 @@ title: Open Source Security Enforcement over your APIs
 subtitle: <strong>A lightweight container for distributed security policy evaluation</strong>
 button_link: https://github.com/rond-authz/rond
 button_label: Check out the repo
-image_file: /assets/img/rond.png
+image_file: /assets/img/rond.svg
 image_alt: Screenshot
 cta: Try Rönd Example
 cta_text: Join the Wall of Shield formation and become a Rönd warrior.
@@ -11,44 +11,44 @@ cta_secondary: Download Overview
 link_cta_secondary: https://github.com/rond-authz/community-resources/raw/main/rond-overview-deck.pdf
 cards: 
   - title: <strong>A shield that protects and authorizes</strong>
-    subtitle: Rönd is an <strong>open source authorization mechanism</strong> that defines the concepts of Roles, Permissions, and User Groups as building blocks.</br/></br/>These building blocks allow you to create your security model leveraging both an <strong>Attribute-Based Access Control</strong> (ABAC) and a <strong>Role-Based Access Control</strong> (RBAC) approach. The system will be a true mirror of your organization and it will reflect the actual role people have and the specific actions they may perform.<br/><br/>Rönd acts like a true shield that enables you to <strong>improve data security and API</strong> while providing full independence and 360-degree permission governance.
-    image_file: /assets/img/Rond-swordandaxe.png
+    subtitle: Rönd is an <strong>open source authorization mechanism</strong> that defines the concepts of Roles, Permissions, and User Groups as building blocks.</br/></br/>These building blocks allow you to create your security model leveraging both an <strong>Attribute-Based Access Control</strong> (ABAC) and a <strong>Role-Based Access Control</strong> (RBAC) approach. The system will be a true mirror of your organization and it will reflect the actual role people have and the specific actions they may perform.<br/><br/>Rönd acts like a true shield that enables you to <strong>improve data security and API</strong> while providing full independence and 360&#8209;degree permission governance.
+    image_file: /assets/img/Rond-swordandaxe.svg
     image_alt: rond-sword-and-axe 
     cta_link: https://github.com/rond-authz/example
     cta_text: &gt Try the example
 
   - title: <strong>A fully-equipped Viking warrior infrastructure</strong>
     subtitle: With Rönd you wear an armor made with the best technologies on the market. Built on top of <strong>Open Policy Agent</strong>, it leverages the <strong>Rego</strong> language to let you write policies to be applied to APIs calls.<br/><br/>It relies on the Sidecar Container Pattern to <strong>avoid any single point of failure</strong>; this means that each pod has an extra container in charge of implementing the authorization controls. The sidecar container intercepts all the incoming requests and proxies them to the actual microservice only if authorization checks are successfully passed.<br/><br/>Rönd simplifies security management with <strong>centralized policies executed in a distributed system</strong>. Forget endless controls embedded in your codebase, and focus only on the authorization rules.
-    image_file:  \assets\img\drakkar-rond.png
+    image_file:  \assets\img\drakkar-rond.svg
     image_alt: drakkar-rond
     cta_link: https://rond-authz.io/docs/getting-started
     cta_text: &gt Find it Out
 
   - title: <strong>Climb the Viking Society with training and discipline.</strong>
     subtitle: From “Karls” to “Jarls” of the solution. Make your first step as a Karl (ordinary person), fight with Rönd as a warrior and <strong>rise as a Jarl</strong> (Master) of your authorization model!
-    image_file: /assets/img/Rond-crown.png
+    image_file: /assets/img/Rond-crown.svg
     image_alt: Rond-crown
     cta_link: https://rond-authz.github.io/docs/
     cta_text: &gt Go to Docs
 carousel:
   intro: Our Mighty Warriors
   card: 
-    - image_file: /assets/img/warriors-logos/cattolica-assicurazioni_logo.png
+    - image_file: /assets/img/warriors-logos/cattolica-assicurazioni_logo.svg
       image_alt: "Cattolica Assicurazioni"
       image_link: https://www.cattolica.it/
 
-    - image_file: /assets/img/warriors-logos/md-concierge_logo.png
+    - image_file: /assets/img/warriors-logos/md-concierge_logo.svg
       image_alt: "MD Concierge"
       image_link: https://www.mdconcierge.it/en/
 
-    - image_file: /assets/img/warriors-logos/mia-care_logo.png
+    - image_file: /assets/img/warriors-logos/mia-care_logo.svg
       image_alt:  "Mia-Care"
       image_link: https://mia-care.io/
 
-    - image_file: /assets/img/warriors-logos/mia-platform_logo.png
+    - image_file: /assets/img/warriors-logos/mia-platform_logo.svg
       image_alt: "Mia-Platform"
       image_link: https://mia-platform.eu
    
-    - image_file: /assets/img/warriors-logos/rb-digital_logo.png
+    - image_file: /assets/img/warriors-logos/rb-digital_logo.svg
       image_alt:  "RBdigital"
       image_link: https://previdigital.com/

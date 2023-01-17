@@ -25,6 +25,6 @@ Rönd intercepts all the incoming traffic, applies authorization rules and, if r
 
 In the image below you can find a representation of the policy evaluation flow that Rönd executes for each API call it intercepts.
 
-![Rönd Policy Evaluation Flow](../assets/img/rond-policy-evaluation-flow.png)
+![Rönd Policy Evaluation Flow](../assets/img/rond-policy-evaluation-flow.svg)
 
 Now that you know what Rönd is and how it works, you are ready to [Getting started](/docs/getting-started).
