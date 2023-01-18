@@ -139,6 +139,8 @@ button {
     margin-bottom: 20px;
     font-weight: 300;
     line-height: 1.38em;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
 .why-rond li {
