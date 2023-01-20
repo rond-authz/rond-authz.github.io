@@ -39,7 +39,7 @@ carousel:
 
     - image_file: /assets/img/warriors-logos/md-concierge_logo.svg
       image_alt: "MD Concierge"
-      image_link: https://www.mdconcierge.it/en/
+      image_link: https://www.mdconcierge.it
 
     - image_file: /assets/img/warriors-logos/mia-care_logo.svg
       image_alt:  "Mia-Care"
