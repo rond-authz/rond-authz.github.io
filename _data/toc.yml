@@ -38,5 +38,9 @@
           url: "docs/policy-integration#custom-built-ins"
         - title: RBAC Data Model
           url: "docs/policy-integration#rbac-data-model"
+        - title: RBAC Based ACL Data Model
+          url: "docs/policy-integration#rbac-based-acl-data-model"
+        - title: ACL Data Model
+          url: "docs/policy-integration#acl-data-model"
     - title: "Cheat Sheet"
       url: "docs/cheat-sheet"

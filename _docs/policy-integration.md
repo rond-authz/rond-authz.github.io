@@ -436,6 +436,10 @@ This collection contains all the bindings between users or groups of users and a
       "roles": [
          "TLRoleId"
       ],
+      "permissions": [
+         "canDoStuff",
+         "canDoActions",
+      ],
       "resource": {
          "resourceId": "project1",
          "resourceType": "project"
@@ -453,5 +457,82 @@ package policies
 has_read_permission {
    userRoles := input.user.roles[_]
    userRoles.permissions[_] == "can_read"
+}
+```
+
+## RBAC Based ACL Data Model
+
+You can use a the [binding association collection](#bindings) to rapresent a ACL data model, in this case you could only use the following fields:
+
+- **bindingId** (string, required): **_unique_** id of the binding
+- **subject** (string array): list of user ids, _usually contains only one subject_
+- **permissions**: (strings) list of permissions or grants (i.e. `canRead`, `canWrite`, ....)
+- **resource**: (object) with properties `type` and `id`.
+
+```json
+[
+   {   
+      "bindingId": "bindingUniqueIdentifier",
+      "subjects": [
+         "bob"
+      ],
+      "permissions": [
+         "canDoStuff",
+         "canDoActions",
+      ],
+      "resource": {
+         "resourceId": "project1",
+         "resourceType": "project"
+      }
+   }
+]
+```
+
+### RBAC Based ACL Policies for permission evaluation
+
+Let's check, in the following example, if the user have the permission to read some data:  
+```rego
+package policies
+
+has_read_permission {
+   user := input.user
+   user.permissions[_] == "canRead"
+}
+
+has_read_permission_for_given_company {
+   companyId := input.request.query["companyId"][0]
+   user := input.user[_].resource == { resourceType: "company", resourceId: companyId }
+   user.permissions[_] == "canRead"
+}
+```
+
+## ACL Data Model
+
+```json
+[
+   {   
+      "_id": "bindingUniqueIdentifier",
+      "userId": "bob",
+      "permissions": [
+         "canDoStuff",
+         "canDoActions",
+      ],
+      "resource": {
+         "resourceId": "project1",
+         "resourceType": "project"
+      }
+   }
+]
+```
+
+### ACL Policies for permission evaluation
+
+Let's check, in the following example, if the user have the permission to read some data:  
+```rego
+package policies
+
+has_read_permission {
+   user := find_one("users", { "userId": input.user.id })
+   user.permissions[_] == "canDoStuff"
 }
 ```
