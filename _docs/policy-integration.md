@@ -460,9 +460,9 @@ has_read_permission {
 }
 ```
 
-## RBAC Based ACL Data Model
+## ACL Data Model
 
-You can use a the [binding association collection](#bindings) to rapresent a ACL data model, in this case you could only use the following fields:
+You can use a the [binding association collection](#bindings) to represent a ACL data model, in this case you could only use the following fields:
 
 - **bindingId** (string, required): **_unique_** id of the binding
 - **subject** (string array): list of user ids, _usually contains only one subject_
@@ -488,7 +488,7 @@ You can use a the [binding association collection](#bindings) to rapresent a ACL
 ]
 ```
 
-### RBAC Based ACL Policies for permission evaluation
+### ACL Policies for permission evaluation
 
 Let's check, in the following example, if the user have the permission to read some data:  
 ```rego
@@ -506,33 +506,30 @@ has_read_permission_for_given_company {
 }
 ```
 
-## ACL Data Model
+## Custom permission evaluation
 
-```json
+If you have a csutom permission model, different from ACL or RBAC you can use the built-in functions [find_one](/docs/policy-integration#custom-built-ins) and [find_many](/docs/policy-integration#custom-built-ins) function
+
+For example if you have a model like this:
+``` json
 [
-   {   
-      "_id": "bindingUniqueIdentifier",
-      "userId": "bob",
-      "permissions": [
-         "canDoStuff",
-         "canDoActions",
-      ],
-      "resource": {
-         "resourceId": "project1",
-         "resourceType": "project"
-      }
+   {
+      "userId": "user01",
+      "grants": [
+         "grantA",
+         "grantB"
+      ]
    }
 ]
 ```
 
-### ACL Policies for permission evaluation
+you can use this query to check permissions:
 
-Let's check, in the following example, if the user have the permission to read some data:  
 ```rego
 package policies
 
 has_read_permission {
    user := find_one("users", { "userId": input.user.id })
-   user.permissions[_] == "canDoStuff"
+   user.grants[_] == "grantB"
 }
 ```

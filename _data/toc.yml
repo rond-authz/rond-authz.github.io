@@ -6,10 +6,11 @@
       children:
         - title: Overview
           url: "docs/getting-started#rönd-overview"
-        - title: RBAC
-          url: "docs/getting-started#rönd-and-rbac"
         - title: Capabilities
           url: "docs/getting-started#rönd-capabilities"
+        - title: Access Control System
+          url: "docs/getting-started#managing-access-control-system-with-rönd"
+        
     - title: "Configuration"
       url: "docs/configuration"
       children:
@@ -38,9 +39,9 @@
           url: "docs/policy-integration#custom-built-ins"
         - title: RBAC Data Model
           url: "docs/policy-integration#rbac-data-model"
-        - title: RBAC Based ACL Data Model
-          url: "docs/policy-integration#rbac-based-acl-data-model"
         - title: ACL Data Model
           url: "docs/policy-integration#acl-data-model"
+        - title: Custom Data Model
+          url: "docs/policy-integration#custom-permission-evaluation"
     - title: "Cheat Sheet"
       url: "docs/cheat-sheet"
