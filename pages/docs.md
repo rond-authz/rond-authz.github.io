@@ -13,7 +13,7 @@ In this page you can find a brief introduction on Rönd and its workflow.
 
 ## Introduction
 
-Rönd is an open-source lightweight Kubernetes sidecar container that defines security policies over your APIs. According to your needs, it can both run as a sidecar container in your Kubernetes cluster or as a standalone service: for further information see the [Configuration page](/docs/configuration).
+Rönd is an open-source lightweight Kubernetes sidecar container that helps you protect your APIs with simple security policies. According to your needs, it can both run as a sidecar container in your Kubernetes cluster or as a standalone service: for further information see the [Configuration page](/docs/configuration).
 
 Rönd uses [Open Policy Agent](https://www.openpolicyagent.org/) as security engine for validating authorization rules, and leverages Rego language for writing the security policies. Policies are centralized, so you do not have to embed them in your codebase.
 
