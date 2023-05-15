@@ -205,7 +205,7 @@ The request is accepted and in the header specified by `headerName` we can find 
                   }
                },
                {
-                  "_id":{
+                  "name":{
                      "$eq":"654321"
                   }
                }
