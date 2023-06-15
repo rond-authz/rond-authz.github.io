@@ -65,7 +65,8 @@ This attribute is an object that contains the following properties:
         "policyName": "policy_to_be_executed_AFTER_API_invocation"
     },
     "options": {
-        "enableResourcePermissionsMapOptimization": false
+        "enableResourcePermissionsMapOptimization": false,
+        "ignoreTrailingSlash": false
     }
 }
 ```
@@ -94,7 +95,8 @@ This attribute is shaped as an object with the following properties:
         "policy": "policy_to_be_executed_AFTER_API_invocation"
     },
     "options": {
-        "enableResourcePermissionsMapOptimization": false
+        "enableResourcePermissionsMapOptimization": false,
+        "ignoreTrailingSlash": false
     },
 }
 ```
@@ -102,9 +104,13 @@ This attribute is shaped as an object with the following properties:
 {%
   include alert.html
   type="info"
-  content="The `enableResourcePermissionsMapOptimization` flag enables the generation of an optimized map of user permissions. This is useful when performing RBAC logics.  
-  More information available in the [Policy Integration page](policy-integration)"
-%}
+  content="**Permission options**  
+  The `enableResourcePermissionsMapOptimization` flag enables the generation of an optimized map of user permissions. This is useful when performing RBAC logics.  
+  More information available in the [Policy Integration page](policy-integration).  
+  
+  The `ignoreTrailingSlash` flag defines the trailing slash behavior for routes. When the flag is enabled, a path registered with a trailing slash is considered the same as the one without it, and viceversa.  
+  For example, if the registered path is `/path/`, accessing `/path` will match nevertheless.
+  Note: registering both versions of the same path and enabling the flag for one of either paths will result in an invalid configuration." %}
 
 {%
   include alert.html
