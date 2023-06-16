@@ -104,7 +104,7 @@ This attribute is shaped as an object with the following properties:
 {%
   include alert.html
   type="info"
-  content="**Route-specific options**    
+  content="<span id=\"route-specific-options\">**Route-specific options**</span>
 
   The `enableResourcePermissionsMapOptimization` flag enables the generation of an optimized map of user permissions. This is useful when performing RBAC logics.  
   More information available in the [Policy Integration page](policy-integration).  
