@@ -21,13 +21,21 @@ cd docs
 The preferred way for serving the site locally is to use `docker compose`:
 
 ```bash
+# v1
 docker-compose up
+
+# v2
+docker compose up
 ```
 
 or, to run it as a daemon:
 
 ```bash
+# v1
 docker-compose up -d
+
+# v2
+docker compose up -d
 ```
 
 You can then open your browser to [http://localhost:4000](http://localhost:4000)
