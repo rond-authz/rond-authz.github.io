@@ -109,7 +109,7 @@ This attribute is shaped as an object with the following properties:
   The `enableResourcePermissionsMapOptimization` flag enables the generation of an optimized map of user permissions. This is useful when performing RBAC logics.  
   More information available in the [Policy Integration page](policy-integration).  
   
-  The `ignoreTrailingSlash` flag defines the trailing slash behavior for routes. When the flag is enabled, a path registered with a trailing slash is considered the same as the one without it, and viceversa.  
+  The `ignoreTrailingSlash` flag, available from version **1.8.0**, defines the trailing slash behavior for routes. When the flag is enabled, a path registered with a trailing slash is considered the same path as the one without it, and viceversa.  
   For example, if the registered path is `/path/`, accessing `/path` will match nevertheless.  
   Note: registering both versions of the same path and enabling the flag for one of either paths will result in an invalid configuration and the service will not start." %}
 
