@@ -23,7 +23,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "9.2.3"
+      "version": "9.5.2"
     },
     {
       "type": "panel",
@@ -205,7 +205,9 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
             "filterable": true,
             "inspect": true
           },
@@ -234,7 +236,9 @@
       },
       "id": 300,
       "options": {
+        "cellHeight": "sm",
         "footer": {
+          "countRows": false,
           "fields": "",
           "reducer": [
             "sum"
@@ -243,7 +247,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "9.2.3",
+      "pluginVersion": "9.5.2",
       "targets": [
         {
           "datasource": {
@@ -378,7 +382,7 @@
           "unit": "ms"
         }
       },
-      "pluginVersion": "9.2.3",
+      "pluginVersion": "9.5.2",
       "repeat": "policyName",
       "repeatDirection": "h",
       "targets": [
@@ -408,7 +412,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 82
+        "y": 172
       },
       "id": 201,
       "panels": [],
@@ -573,7 +577,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 83
+        "y": 173
       },
       "id": 61,
       "interval": "1m",
@@ -655,8 +659,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 107
+        "y": 197
       },
+<<<<<<< Updated upstream
       "id": 8,
       "panels": [
         {
@@ -1226,10 +1231,820 @@
       ],
       "title": "Debug",
       "type": "row"
+=======
+      "id": 442,
+      "panels": [],
+      "title": "Memory",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "$datasource"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 0,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bytes"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Requests"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#F2495C",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": false,
+                  "mode": "normal"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Limits"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#FF9830",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": false,
+                  "mode": "normal"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Throttle"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "semi-dark-purple",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "false",
+                  "mode": "normal"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 1
+              },
+              {
+                "id": "unit",
+                "value": "percentunit"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 198
+      },
+      "id": 448,
+      "interval": "1m",
+      "links": [],
+      "maxPerRow": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.2.3",
+      "repeat": "service",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "datasource": {
+            "uid": "$datasource"
+          },
+          "editorMode": "code",
+          "expr": "sum(\n    container_memory_working_set_bytes{k8sCluster=\"$cluster\", namespace=\"$namespace\"}\n  * on(namespace,pod)\n    group_left(workload, workload_type) namespace_workload_pod:kube_pod_owner:relabel{k8sCluster=\"$cluster\", namespace=\"$namespace\", workload=\"$service\"}\n)",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "Usage",
+          "range": true,
+          "refId": "A",
+          "step": 10
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "$datasource"
+          },
+          "editorMode": "code",
+          "expr": "sum(kube_pod_container_resource_requests{k8sCluster=\"$cluster\", namespace=\"$namespace\",container=\"rbac-service\", resource=\"memory\"})",
+          "hide": false,
+          "legendFormat": "Requests",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "$datasource"
+          },
+          "editorMode": "code",
+          "expr": "sum(kube_pod_container_resource_limits{k8sCluster=\"$cluster\", namespace=\"$namespace\",container=\"rbac-service\", resource=\"memory\"})",
+          "hide": false,
+          "legendFormat": "Limits",
+          "range": true,
+          "refId": "C"
+        }
+      ],
+      "title": "Memory $service",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 222
+      },
+      "id": 8,
+      "panels": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "custom": {
+                "align": "auto",
+                "cellOptions": {
+                  "type": "auto"
+                },
+                "inspect": false
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Requests"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 300
+                  },
+                  {
+                    "id": "custom.cellOptions",
+                    "value": {
+                      "mode": "gradient",
+                      "type": "gauge"
+                    }
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "mode": "continuous-BlYlRd"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 12,
+            "x": 0,
+            "y": 214
+          },
+          "id": 4,
+          "maxDataPoints": 1,
+          "options": {
+            "cellHeight": "sm",
+            "footer": {
+              "countRows": false,
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
+            "frameIndex": 0,
+            "showHeader": true,
+            "sortBy": [
+              {
+                "desc": true,
+                "displayName": "Requests"
+              }
+            ]
+          },
+          "pluginVersion": "9.5.2",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+              },
+              "editorMode": "code",
+              "expr": "sum by (policyName) (count_over_time({k8sCluster=\"$cluster\",namespace=\"$namespace\",container=\"rbac-service\",app_kubernetes_io_name=~\"$service\"} | json | msg = \"policy evaluation completed\" and policyName=~\"$policyName\" | __error__=\"\" [$__range]))",
+              "legendFormat": "{{requestURL}}",
+              "queryType": "instant",
+              "range": true,
+              "refId": "A"
+            }
+          ],
+          "title": "Top used policy",
+          "transformations": [
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "Time": true
+                },
+                "indexByName": {},
+                "renameByName": {
+                  "Value #A": "Requests",
+                  "requestURL": "URL"
+                }
+              }
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "custom": {
+                "align": "auto",
+                "cellOptions": {
+                  "type": "auto"
+                },
+                "filterable": true,
+                "inspect": false
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Service"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 149
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "matchedPath"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 397
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "requestedPath"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 229
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Policy Name"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 256
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Method"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 93
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Matched Path"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 325
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Partial Eval"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 109
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Allowed"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 95
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Requested Paths"
+                },
+                "properties": [
+                  {
+                    "id": "custom.inspect",
+                    "value": true
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 10,
+            "w": 24,
+            "x": 0,
+            "y": 223
+          },
+          "id": 128,
+          "options": {
+            "footer": {
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
+            "showHeader": true,
+            "sortBy": []
+          },
+          "pluginVersion": "9.2.3",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+              },
+              "editorMode": "code",
+              "expr": "{k8sCluster=\"$cluster\",namespace=\"$namespace\",app_kubernetes_io_name=~\"$service\"} | json | msg = \"policy evaluation completed\" and policyName=~\"$policyName\" | __error__=\"\"",
+              "queryType": "range",
+              "refId": "A"
+            }
+          ],
+          "title": "Policy/Path mapping",
+          "transformations": [
+            {
+              "id": "extractFields",
+              "options": {
+                "replace": true,
+                "source": "labels"
+              }
+            },
+            {
+              "id": "groupBy",
+              "options": {
+                "fields": {
+                  "Service": {
+                    "aggregations": [],
+                    "operation": "groupby"
+                  },
+                  "allowed": {
+                    "aggregations": [],
+                    "operation": "groupby"
+                  },
+                  "app_kubernetes_io_name": {
+                    "aggregations": [],
+                    "operation": "groupby"
+                  },
+                  "matchedPath": {
+                    "aggregations": [],
+                    "operation": "groupby"
+                  },
+                  "method": {
+                    "aggregations": [],
+                    "operation": "groupby"
+                  },
+                  "partialEval": {
+                    "aggregations": [],
+                    "operation": "groupby"
+                  },
+                  "policyName": {
+                    "aggregations": [],
+                    "operation": "groupby"
+                  },
+                  "requestedPath": {
+                    "aggregations": [
+                      "uniqueValues"
+                    ],
+                    "operation": "aggregate"
+                  }
+                }
+              }
+            },
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "app": true,
+                  "app_kubernetes_io_component": true,
+                  "app_kubernetes_io_managed_by": true,
+                  "app_kubernetes_io_part_of": true,
+                  "app_kubernetes_io_version": true,
+                  "container": true,
+                  "container_id": true,
+                  "evaluationTimeMicroseconds": true,
+                  "host": true,
+                  "k8sCluster": true,
+                  "level": true,
+                  "mia_platform_eu_log_type": true,
+                  "mia_platform_eu_stage": true,
+                  "mia_platform_eu_tenant": true,
+                  "msg": true,
+                  "namespace": true,
+                  "pod": true,
+                  "pod_id": true,
+                  "pod_template_hash": true,
+                  "reqId": false,
+                  "time": true
+                },
+                "indexByName": {
+                  "allowed": 5,
+                  "app_kubernetes_io_name": 0,
+                  "matchedPath": 3,
+                  "method": 2,
+                  "partialEval": 4,
+                  "policyName": 1,
+                  "requestedPath (uniqueValues)": 6
+                },
+                "renameByName": {
+                  "allowed": "Allowed",
+                  "app_kubernetes_io_name": "Service",
+                  "matchedPath": "Matched Path",
+                  "method": "Method",
+                  "partialEval": "Partial Eval",
+                  "policyName": "Policy Name",
+                  "requestedPath (uniqueValues)": "Requested Paths"
+                }
+              }
+            }
+          ],
+          "type": "table"
+        },
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 100,
+                "gradientMode": "hue",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "smooth",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "log": 10,
+                  "type": "log"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "area"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 1000
+                  },
+                  {
+                    "color": "red",
+                    "value": 10000
+                  }
+                ]
+              },
+              "unit": "µs"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "95th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "light-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "max latency"
+                },
+                "properties": [
+                  {
+                    "id": "custom.fillOpacity",
+                    "value": 20
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "super-light-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "50th percentile"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "dark-blue",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 6,
+            "x": 0,
+            "y": 233
+          },
+          "id": 11,
+          "maxDataPoints": 50,
+          "maxPerRow": 4,
+          "options": {
+            "legend": {
+              "calcs": [
+                "min",
+                "mean",
+                "max"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "9.2.3",
+          "repeat": "policyName",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+              },
+              "editorMode": "code",
+              "expr": "max (max_over_time({k8sCluster=\"$cluster\",namespace=\"$namespace\",app_kubernetes_io_name=~\"$service\"} | json | msg = \"policy evaluation completed\" and policyName=\"$policyName\"  | unwrap evaluationTimeMicroseconds | __error__=\"\" [$__range])) by (namespace)",
+              "hide": false,
+              "legendFormat": "max latency",
+              "queryType": "range",
+              "refId": "B"
+            },
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+              },
+              "editorMode": "code",
+              "expr": "quantile_over_time(0.95, {k8sCluster=\"$cluster\",namespace=\"$namespace\",app_kubernetes_io_name=~\"$service\"} | json | msg = \"policy evaluation completed\" and policyName=\"$policyName\" | unwrap evaluationTimeMicroseconds | __error__=\"\" [$__range]) by (namespace)",
+              "legendFormat": "95th percentile",
+              "queryType": "range",
+              "refId": "A"
+            },
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "${DS_LOKI}"
+              },
+              "editorMode": "code",
+              "expr": "quantile_over_time(0.5, {k8sCluster=\"$cluster\",namespace=\"$namespace\",app_kubernetes_io_name=~\"$service\"} | json | msg = \"policy evaluation completed\" and policyName=\"$policyName\" | unwrap evaluationTimeMicroseconds | __error__=\"\" [$__range]) by (namespace)",
+              "hide": false,
+              "legendFormat": "50th percentile",
+              "queryType": "range",
+              "refId": "C"
+            }
+          ],
+          "title": "Evaluation time policy $policyName",
+          "type": "timeseries"
+        }
+      ],
+      "title": "Debug",
+      "type": "row"
+>>>>>>> Stashed changes
     }
   ],
-  "refresh": false,
-  "schemaVersion": 37,
+  "refresh": "",
+  "schemaVersion": 38,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1240,12 +2055,13 @@
           "text": "Prometheus",
           "value": "Prometheus"
         },
-        "hide": 2,
+        "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "datasource",
         "options": [],
         "query": "prometheus",
+        "queryValue": "",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1362,6 +2178,10 @@
   "timezone": "",
   "title": "Rönd Metrics",
   "uid": "B4kCs75Vz12",
+<<<<<<< Updated upstream
   "version": 4,
+=======
+  "version": 12,
+>>>>>>> Stashed changes
   "weekStart": ""
 }
