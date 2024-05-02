@@ -40,3 +40,11 @@
           url: "docs/policy-integration#rbac-data-model"
     - title: "Cheat Sheet"
       url: "docs/cheat-sheet"
+- title: Community Resources
+  url: community-resources
+  links:
+    - title: Talk
+      url: "community-resources/talk"
+    - title: Workshop
+      url: "community-resources/workshop"
+

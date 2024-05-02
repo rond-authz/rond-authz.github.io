@@ -8,6 +8,9 @@
   
   <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
     {% for section in site.data.toc %}
+      {% assign urlParts = page.url | split: "/" %}
+      {% assign tocUrl = urlParts[1] | replace: "/", "" %}
+      {% if section.url == tocUrl %}
       <ul class="td-sidebar-nav__section pr-md-3">
         {% capture sectionUrl %} 
           {{ section.url | replace: "/", "" }} 
@@ -49,6 +52,7 @@
           </ul>
         {% endif %}
       </ul>
+      {% endif %}
     {% endfor %}
   </nav>
 </div>

@@ -1,6 +1,9 @@
 - title: Documentation
   url: docs
   target: _self
+- title: Community Resources
+  url: community-resources
+  target: _self
 - title: Discussions
   external_url: https://github.com/rond-authz/rond/discussions
   target: _blank
