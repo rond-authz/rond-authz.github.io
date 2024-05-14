@@ -9,6 +9,12 @@ order: 1
 
 Here a curated list of talks about Rönd.
 
+#### Platmosphere 2024 - Secure Your Platform With IAM And Fine Grained Access Control
+
+In this talk, we explore how Fine Grained Authorization can enhance the security of an Internal Developer Platform. Learn the different strategies, patterns and best practices for authorization. Discover how to leverage OSS tech like Rönd and OpenFGA. Gain practical insights and strategies to safeguard your platform against modern cyber threats.
+
+- [get the slides](https://github.com/rond-authz/community-resources/blob/main/talks/240514%20-%20Secure%20Your%20Platform%20With%20IAM%20And%20Fine%20Grained%20Access%20Control%20-%20Platmosphere%20Milan.pdf)
+
 #### OSDAY 2024 - Practical Policy-as-code with OPA and a managed sidecar container
 
 The cloud-native landscape brings incredible advantages, but it also introduces new security challenges, making safeguarding a top priority. In the traditional policy enforcement model, manual management leaves organizations vulnerable to inevitable breaches due to human error – a matter of 'when,' not 'if.' Enter Policy-as-Code (PaC), a game-changing approach that leverages code to define and manage policies, transforming rules and conditions into actionable directives. By keeping policy definitions in source code control, whenever a change is made, it can be tested, validated, and then executed. The goal of PaC is not to detect policy violations but to prevent them. In this session we delve into the practical implementation of a Policy-as-Code strategy for your organization using Rönd and Open Policy Agent, two powerful open-source projects that could help you to redefine your security paradigm.
