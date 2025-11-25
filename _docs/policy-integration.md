@@ -363,6 +363,61 @@ rider := riders[_]
 rider.riderId == input.request.pathParams.riderId
 ```
 
+### `redis_get`
+
+The `redis_get` built-in function can be used to retrieve a value from Redis by key.  
+It accepts a string key and returns the value stored at that key, automatically parsed as JSON if possible, otherwise returned as a string. If the key does not exist, it returns `null`.
+
+Example usage to fetch cached user data from Redis:
+
+```rego
+user_data := redis_get("user:123")
+user_data != null
+user_data.role == "admin"
+```
+
+### `redis_set`
+
+The `redis_set` built-in function can be used to store a value in Redis without an expiration time.  
+It accepts a string key and a value of any type (automatically serialized to JSON), and returns `true` if the operation succeeds.
+
+Example usage to cache user permissions:
+
+```rego
+cache_key := sprintf("user:%s:permissions", [input.user.id])
+result := redis_set(cache_key, input.user.permissions)
+result == true
+```
+
+### `redis_set_with_expiration`
+
+The `redis_set_with_expiration` built-in function can be used to store a value in Redis with a specified expiration time.  
+It accepts a string key, a value of any type (automatically serialized to JSON), and an expiration time in seconds, and returns `true` if the operation succeeds.
+
+Example usage to cache session data for 1 hour:
+
+```rego
+session_data := {
+    "user_id": input.user.id,
+    "timestamp": time.now_ns()
+}
+result := redis_set_with_expiration("session:abc123", session_data, 3600)
+result == true
+```
+
+### `redis_del`
+
+The `redis_del` built-in function can be used to delete a key from Redis.  
+It accepts a string key and returns `true` if the operation succeeds, regardless of whether the key existed.
+
+Example usage to delete a cached value:
+
+```rego
+key := input.request.pathParams.key
+result := redis_del(key)
+result == true
+```
+
 
 ## RBAC Data Model
 
